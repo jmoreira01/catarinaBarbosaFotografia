@@ -14,7 +14,8 @@ class OrganizationController extends Controller
      */
     public function index()
     {
-        //
+        //$organizations = Organization::all();
+        //return view('dashboard.pages.empresa.indexempresa'); ---> dá conflito
     }
 
     /**
@@ -24,7 +25,7 @@ class OrganizationController extends Controller
      */
     public function create()
     {
-        //
+        //return view('dashboard.pages.empresa.createempresa');
     }
 
     /**
@@ -35,7 +36,34 @@ class OrganizationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name'               => 'required',
+            'email'              => 'required',
+            'phone_number'       => 'required',
+            'address'            => 'required',
+            'city'               => 'required',
+            'country'            => 'required',
+            'postal_code'        => 'required',
+            'facebook'           => 'required',
+            'instagram'          => 'required',
+            'linkedin'           => 'required',
+
+        ]);
+
+        $organization = new Organization();
+        $organization->name               = $request->name;
+        $organization->email        = $request->email;
+        $organization->phone_number        = $request->phone_number;
+        $organization->address       = $request->address;
+        $organization->city        = $request->city;
+        $organization->country       = $request->country;
+        $organization->postal_code        = $request->postal_code;
+        $organization->facebook       = $request->facebook;
+        $organization->instagram        = $request->instagram;
+        $organization->linkedin        = $request->linkedin;
+        $organization->save();
+
+        return redirect('organizations')->with('status','Item created successfully!');
     }
 
     /**
@@ -46,7 +74,7 @@ class OrganizationController extends Controller
      */
     public function show(Organization $organization)
     {
-        //
+        return view('dashboard.pages.empresa.showempresa');
     }
 
     /**
@@ -57,7 +85,8 @@ class OrganizationController extends Controller
      */
     public function edit(Organization $organization)
     {
-        //
+        $organizations = Organization::all();
+        return view('dashboard.pages.empresa.editempresa');
     }
 
     /**
@@ -69,7 +98,8 @@ class OrganizationController extends Controller
      */
     public function update(Request $request, Organization $organization)
     {
-        //
+        $organization->update($request->all());
+        return redirect('organizations')->with('status','Item edited successfully!');
     }
 
     /**
@@ -80,6 +110,8 @@ class OrganizationController extends Controller
      */
     public function destroy(Organization $organization)
     {
-        //
+        $organization = Organization::find($organization->id);
+        $organization->delete();
+        return redirect('organizations')->with('status','Item deleted successfully!');
     }
 }

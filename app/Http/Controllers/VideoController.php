@@ -14,7 +14,8 @@ class VideoController extends Controller
      */
     public function index()
     {
-        //
+        $videos = Video::all();
+        return view('dashboard.pages.videos.indexvideos');
     }
 
     /**
@@ -24,7 +25,7 @@ class VideoController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.pages.videos.createvideos');
     }
 
     /**
@@ -35,7 +36,19 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'url'                => 'required',
+            'service_id'         => 'required',
+
+        ]);
+
+        $video = new Video();
+        $video->url              = $request->url  ;
+        $video->service_id        = $request->service_id;
+
+        $video->save();
+
+        return redirect('videos')->with('status','Item created successfully!');
     }
 
     /**
@@ -46,7 +59,7 @@ class VideoController extends Controller
      */
     public function show(Video $video)
     {
-        //
+        return view('dashboard.pages.videos.showvideos');
     }
 
     /**
@@ -57,7 +70,8 @@ class VideoController extends Controller
      */
     public function edit(Video $video)
     {
-        //
+        $videos = Video::all();
+        return view('dashboard.pages.videos.editvideos');
     }
 
     /**
@@ -69,7 +83,8 @@ class VideoController extends Controller
      */
     public function update(Request $request, Video $video)
     {
-        //
+        $video->update($request->all());
+        return redirect('videos')->with('status','Item edited successfully!');
     }
 
     /**
@@ -80,6 +95,8 @@ class VideoController extends Controller
      */
     public function destroy(Video $video)
     {
-        //
+        $video = Video::find($video->id);
+        $video->delete();
+        return redirect('videos')->with('status','Item deleted successfully!');
     }
 }

@@ -14,7 +14,8 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        //
+        $services = Service::all();
+        return view('dashboard.pages.servicos.indexservicos');
     }
 
     /**
@@ -24,7 +25,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.pages.servicos.createservicos');
     }
 
     /**
@@ -35,7 +36,17 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name'               => 'required',
+            'description'        => 'required',
+        ]);
+
+        $service = new Service();
+        $service->name               = $request->name;
+        $service->description        = $request->description;
+        $service->save();
+
+        return redirect('services')->with('status','Item created successfully!');
     }
 
     /**
@@ -46,7 +57,7 @@ class ServiceController extends Controller
      */
     public function show(Service $service)
     {
-        //
+        return view('dashboard.pages.servicos.showservicos');
     }
 
     /**
@@ -57,7 +68,8 @@ class ServiceController extends Controller
      */
     public function edit(Service $service)
     {
-        //
+        $services = Service::all();
+        return view('dashboard.pages.servicos.editservicos');
     }
 
     /**
@@ -69,7 +81,8 @@ class ServiceController extends Controller
      */
     public function update(Request $request, Service $service)
     {
-        //
+        $service->update($request->all());
+        return redirect('services')->with('status','Item edited successfully!');
     }
 
     /**
@@ -80,6 +93,8 @@ class ServiceController extends Controller
      */
     public function destroy(Service $service)
     {
-        //
+        $service = Service::find($service->id);
+        $service->delete();
+        return redirect('services')->with('status','Item deleted successfully!');
     }
 }

@@ -70,7 +70,6 @@
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
-
                     @else
                         <a href="{{ route('login') }}"><i class="bi bi-person-circle" style="font-size: 40px"></i></a>
                     @endauth
