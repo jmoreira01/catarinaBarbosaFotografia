@@ -6,7 +6,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav w-100">
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('accesses') ? 'active' : '' }}" role="button" href="/accesses">Acessos</a>
                 </li>
@@ -25,7 +25,8 @@
                     <a class="nav-link {{ Request::is('videos') ? 'active' : '' }}" role="button"
                        href="/videos">Videos</a>
                 </li>
-
+            </ul>
+            <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                        aria-expanded="false">
@@ -45,6 +46,8 @@
                     </ul>
                 </li>
             </ul>
+
+
         </div>
     </div>
 </nav>

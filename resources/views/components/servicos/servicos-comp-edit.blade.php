@@ -32,7 +32,7 @@
 
         <!-- ======================== Botão ============================== -->
 
-        <button type="submit" class="mt-2 mb-5 btn btn-primary">Submit</button>
+        <button type="submit" class="mt-2 mb-5 btn btn-primary">Salvar</button>
 
         <a href="{{url('/services')}}" class="mt-2 mb-5 mr-2 btn btn-outline-info">Voltar</a>
 

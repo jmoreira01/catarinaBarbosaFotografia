@@ -72,6 +72,7 @@ class ServiceController extends Controller
         return view('dashboard.pages.servicos.editservicos', ['service' => $service]);
     }
 
+
     /**
      * Update the specified resource in storage.
      *

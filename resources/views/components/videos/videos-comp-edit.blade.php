@@ -13,6 +13,7 @@
             value="{{ $video -> url}}"
             autocomplete="url"
             class="form-control"
+            required
             >
     </div>
 

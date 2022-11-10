@@ -12,8 +12,7 @@ const textButtons = document.querySelectorAll('.animation_btn');
 textButtons.forEach(textButton =>{
     let text = textButton.querySelector('p');
 
-    text.innerHTML = text.innerHTML.split('').map((character,index) =>
-        `<span style="transform: rotate(${index * 12}deg)">${character}</span>`).join('')
+    text.innerHTML = text.innerHTML.split('').map((character,index) => `<span style="transform: rotate(${index * 12}deg)">${character}</span>`).join('')
 })
 
 
@@ -58,6 +57,32 @@ const closeNav = () => {
 }
 closeNavBtn.addEventListener('click', closeNav);
 
-nav.querySelectorAll('li a').forEach(navLink => {
-    navLink.addEventListener('click', closeNav);
-})
+//close nav menu on click of menu link
+if(document.body.clientWidth < 1024) {
+    nav.querySelectorAll('li a').forEach(navLink => {
+        navLink.addEventListener('click', closeNav);
+    })
+}
+
+// Login Page
+
+const inputs = document.querySelectorAll(".input_login");
+
+
+function addcl(){
+    let parent = this.parentNode.parentNode;
+    parent.classList.add("focus");
+}
+
+function remcl(){
+    let parent = this.parentNode.parentNode;
+    if(this.value == ""){
+        parent.classList.remove("focus");
+    }
+}
+
+
+inputs.forEach(input => {
+    input.addEventListener("focus", addcl);
+    input.addEventListener("blur", remcl);
+});

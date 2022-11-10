@@ -41,34 +41,9 @@
             <button class="nav__toggle-btn" id="nav__toogle-close"><i class="uil uil-times-circle"></i></button>
         </div>
     </nav>
-    <!-- END NAVBAR -->
-
-
-<!--
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}"><i class="bi bi-person-circle" style="font-size: 40px"></i></a>
-                    @endauth
-                </div>
-            @endif
-            <div class="content">
-                <div class="title m-b-md">
-                    Catarina Barbosa <br> Fotografia
-                </div>
-                <div class="links">
-                    <a href="https://laravel.com/docs">sobre mim</a>
-                    <a href="https://laracasts.com">servicos</a>
-                    <a href="https://laravel-news.com">contato</a>
-                </div>
-            </div>
-        </div>
--->
 
     <!-- Home section -->
+
     <header>
         <div class="container header_container">
             <div class="header_left">

@@ -22,7 +22,7 @@
 
     <table class="table table-striped">
         <thead>
-        <tr>
+        <tr class="text-center">
             <th scope="col" class="align-middle">Imagem</th>
             <th scope="col" class="align-middle">Serviço</th>
             <th scope="col" class="align-middle"></th>
@@ -32,14 +32,14 @@
         @foreach($images as $image)
             <tr>
 
-                <td class="align-middle">
+                <td class="align-middle text-center">
                     @if ($image->image)
-                        <img class="w-25 img-responsive rounded-3" src="{{ asset('storage/'.$image->image) }}" alt="" title=""></a>
+                        <img class="w-auto img-responsive rounded-3" src="{{ asset('storage/'.$image->image) }}" alt="" title="" style="max-height: 100px"></a>
                     @else
                         <p>No Image</p>
                     @endif
                 </td>
-                <td class="align-middle">{{$image->service->name}} </td>
+                <td class="align-middle text-center">{{$image->service->name}} </td>
                 <td class="align-middle text-center">
                     <div class="pr-1 m-1">
                         <a href="{{url('images/' . $image->id)}}" type="button" class="btn btn-outline-success"
