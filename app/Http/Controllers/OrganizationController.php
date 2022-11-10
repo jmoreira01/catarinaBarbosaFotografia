@@ -99,7 +99,7 @@ class OrganizationController extends Controller
     public function update(Request $request, Organization $organization)
     {
         $organization->update($request->all());
-        return redirect('organizations')->with('status','Item edited successfully!');
+        return redirect('organizations/1')->with('status','Item edited successfully!');
     }
 
     /**

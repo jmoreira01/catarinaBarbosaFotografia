@@ -13,7 +13,8 @@
                 autocomplete="name"
                 value="{{ $organization -> name}}"
                 placeholder="Nome da Empresa"
-                class="form-control">
+                class="form-control"
+            required>
         </div>
     </div>
     <div class="form-row">
@@ -26,7 +27,8 @@
                 autocomplete="email"
                 value="{{ $organization -> email}}"
                 placeholder="Email"
-                class="form-control">
+                class="form-control"
+                required>
         </div>
     </div>
     <div class="form-row">
@@ -125,6 +127,6 @@
                     class="form-control">
             </div>
         </div>
-        <button type="submit" class="mt-2 mb-5 btn btn-primary"><a href="back"></a> Submit</button>
+        <button type="submit" class="mt-2 mb-5 btn btn-primary">Submit</button>
     </form>
 </div>
