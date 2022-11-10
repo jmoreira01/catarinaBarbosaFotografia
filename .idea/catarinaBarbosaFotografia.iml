@@ -102,6 +102,13 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-code-coverage" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/ui" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpmailer/phpmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/oscarotero/html-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ml/iri" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ml/json-ld" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/embed/embed" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bensampo/laravel-embed" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

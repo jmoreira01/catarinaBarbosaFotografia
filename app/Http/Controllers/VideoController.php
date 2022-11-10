@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Service;
 use App\Video;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,7 @@ class VideoController extends Controller
     public function index()
     {
         $videos = Video::all();
-        return view('dashboard.pages.videos.indexvideos');
+        return view('dashboard.pages.videos.indexvideos', ['videos' => $videos]);
     }
 
     /**
@@ -25,7 +26,9 @@ class VideoController extends Controller
      */
     public function create()
     {
-        return view('dashboard.pages.videos.createvideos');
+        $videos = Video::with(['service']);
+        $services = Service::all();
+        return view('dashboard.pages.videos.createvideos', ['videos' => $videos, 'services' => $services]);
     }
 
     /**
@@ -59,7 +62,7 @@ class VideoController extends Controller
      */
     public function show(Video $video)
     {
-        return view('dashboard.pages.videos.showvideos');
+        //return view('dashboard.pages.videos.showvideos');
     }
 
     /**
@@ -70,8 +73,9 @@ class VideoController extends Controller
      */
     public function edit(Video $video)
     {
-        $videos = Video::all();
-        return view('dashboard.pages.videos.editvideos');
+        $videos = Video::with(['service']);
+        $services = Service::all();
+        return view('dashboard.pages.videos.editvideos', ['video' => $video, 'services' => $services]);
     }
 
     /**
@@ -85,6 +89,11 @@ class VideoController extends Controller
     {
         $video->update($request->all());
         return redirect('videos')->with('status','Item edited successfully!');
+
+        $video = Video::find($video->id);
+        $video->url              = $request->url;
+        $video->service_id        = $request->service_id;
+        $video->save();
     }
 
     /**

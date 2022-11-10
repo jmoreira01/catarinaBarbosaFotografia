@@ -11,6 +11,9 @@ class VideoSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('videos')->insert([
+            'url' => 'https://www.youtube.com/watch?v=eYMm0nZQfhQ',
+            'service_id' => '1'
+        ]);
     }
 }

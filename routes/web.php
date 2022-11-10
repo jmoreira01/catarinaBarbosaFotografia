@@ -59,10 +59,10 @@ Route::put('/images/{image}', 'ImageController@update');
 Route::delete('/images/{image}', 'ImageController@destroy');
 
 // Videos
-Route::get('/videos', 'ImageController@index');
-Route::get('/videos/create', 'ImageController@create');
-Route::post('/videos', 'ImageController@store');
-Route::get('/videos/{video}', 'ImageController@show');
-Route::get('/videos/{video}/edit', 'ImageController@edit');
-Route::put('/videos/{video}', 'ImageController@update');
-Route::delete('/videos/{video}', 'ImageController@destroy');
+Route::get('/videos', 'VideoController@index');
+Route::get('/videos/create', 'VideoController@create');
+Route::post('/videos', 'VideoController@store');
+Route::get('/videos/{video}', 'VideoController@show');
+Route::get('/videos/{video}/edit', 'VideoController@edit');
+Route::put('/videos/{video}', 'VideoController@update');
+Route::delete('/videos/{video}', 'VideoController@destroy');

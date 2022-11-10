@@ -9,7 +9,7 @@
 @section('content')
 
 
-    @component('components.videos.videos-comp-list')
+    @component('components.videos.videos-comp-list', ['videos' => $videos])
     @endcomponent
 
 @stop

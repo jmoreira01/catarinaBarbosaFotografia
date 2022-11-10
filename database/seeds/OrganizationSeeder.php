@@ -12,6 +12,7 @@ class OrganizationSeeder extends Seeder
     public function run()
     {
         DB::table('organizations')->insert([
+            'logo' => '',
             'name' => 'Catarina Barbosa Fotografia',
             'email' => 'catarinabarbosafotografia@gmail.com',
             'phone_number' => '912164392',

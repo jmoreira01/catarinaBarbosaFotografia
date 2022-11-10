@@ -9,7 +9,7 @@
 @section('content')
 
 
-    @component('components.empresa.empresa-comp-edit')
+    @component('components.empresa.empresa-comp-edit', ['organization' => $organization])
     @endcomponent
 
 @stop

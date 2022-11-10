@@ -14,8 +14,7 @@ class OrganizationController extends Controller
      */
     public function index()
     {
-        //$organizations = Organization::all();
-        //return view('dashboard.pages.empresa.indexempresa'); ---> dá conflito
+        //
     }
 
     /**
@@ -74,7 +73,8 @@ class OrganizationController extends Controller
      */
     public function show(Organization $organization)
     {
-        return view('dashboard.pages.empresa.showempresa');
+        $organizations = Organization::all();
+        return view('dashboard.pages.empresa.showempresa', ['organization' => $organization]);
     }
 
     /**
@@ -86,7 +86,7 @@ class OrganizationController extends Controller
     public function edit(Organization $organization)
     {
         $organizations = Organization::all();
-        return view('dashboard.pages.empresa.editempresa');
+        return view('dashboard.pages.empresa.editempresa' , ['organization' => $organization]);
     }
 
     /**

@@ -1,4 +1,4 @@
-@extends('dashboard.master.main')
+{{-- @extends('dashboard.master.main')
 
 @section('styles')
 @stop
@@ -9,7 +9,8 @@
 @section('content')
 
 
-    @component('components.videos.videos-comp-show')
+    @component('components.videos.videos-comp-show', ['video' => $video, 'services' => $services])
     @endcomponent
 
 @stop
+--}}

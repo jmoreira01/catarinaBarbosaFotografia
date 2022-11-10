@@ -43,7 +43,7 @@
                             </div>
                             <div class="col">
                                 <div class="card">
-                                    <a href="/organizations/{organization}"><img src="img/exemplo.jpg" class="card-img-top" alt="..."></a>
+                                    <a href="/organizations/1"><img src="img/exemplo.jpg" class="card-img-top" alt="..."></a>
                                     <div class="card-body">
                                         <h5 class="card-title">EMPRESA</h5>
                                     </div>

@@ -9,7 +9,7 @@
 @section('content')
 
 
-    @component('components.imagens.imagens-comp-list')
+    @component('components.imagens.imagens-comp-list', ['images' => $images])
     @endcomponent
 
 @stop

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Image;
+use App\Service;
 use Illuminate\Http\Request;
 
 class ImageController extends Controller
@@ -15,7 +16,7 @@ class ImageController extends Controller
     public function index()
     {
         $images = Image::all();
-        return view('dashboard.pages.imagens.indeximagens');
+        return view('dashboard.pages.imagens.indeximagens', ['images' => $images]);
     }
 
     /**
@@ -25,7 +26,9 @@ class ImageController extends Controller
      */
     public function create()
     {
-        return view('dashboard.pages.imagens.createimagens');
+        $images = Image::with(['service']);
+        $services = Service::all();
+        return view('dashboard.pages.imagens.createimagens', ['images' => $images, 'services' => $services]);
     }
 
     /**
@@ -37,16 +40,28 @@ class ImageController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'url'                => 'required',
+            'image'                => 'required',
             'service_id'         => 'required',
-
         ]);
 
         $image = new Image();
-        $image->url              = $request->url  ;
+        $image->image              = $request->image;
         $image->service_id        = $request->service_id;
-
         $image->save();
+
+        //If we have an image file, we store it, and move it in the database
+        if ($request->file('image')) {
+            // Get Image File
+            $imagePath = $request->file('image');
+            // Define Image Name
+            $imageName = $image->id . '_' . time() . '_' . $imagePath->getClientOriginalName();
+            // Save Image on Storage
+            $path = $request->file('image')->storeAs('images/images/' . $image->id, $imageName, 'public');
+            //Save Image Path
+            $image->image = $path;
+        }
+        $image->save();
+
 
         return redirect('images')->with('status','Item created successfully!');
     }
@@ -59,7 +74,7 @@ class ImageController extends Controller
      */
     public function show(Image $image)
     {
-        return view('dashboard.pages.imagens.showimagens');
+        //return view('dashboard.pages.imagens.showimagens');
     }
 
     /**
@@ -70,8 +85,9 @@ class ImageController extends Controller
      */
     public function edit(Image $image)
     {
-        $images = Image::all();
-        return view('dashboard.pages.imagens.editimagens');
+        $images = Image::with(['service']);
+        $services = Service::all();
+        return view('dashboard.pages.imagens.editimagens', ['image' => $image, 'services' => $services]);
     }
 
     /**
@@ -84,7 +100,12 @@ class ImageController extends Controller
     public function update(Request $request, Image $image)
     {
         $image->update($request->all());
-        return redirect('images')->with('status','Item edited successfully!');
+        return redirect('images')->with('status', 'Item edited successfully!');
+
+        $image = Video::find($image->id);
+        $image->image = $request->image;
+        $image->service_id = $request->service_id;
+        $image->save();
     }
 
     /**
@@ -95,6 +116,8 @@ class ImageController extends Controller
      */
     public function destroy(Image $image)
     {
+        Storage::deleteDirectory('public/images/images/' . $image->id);
+
         $image = Image::find($image->id);
         $image->delete();
         return redirect('images')->with('status','Item deleted successfully!');

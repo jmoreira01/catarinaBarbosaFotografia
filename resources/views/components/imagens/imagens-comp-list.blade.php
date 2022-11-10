@@ -1,3 +1,0 @@
-<h1>
-    INDEX LISTA IMAGES
-</h1>
