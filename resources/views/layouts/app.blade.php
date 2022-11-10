@@ -32,35 +32,6 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <div class="collapse navbar-collapse mr-auto">
-                        <a class="navbar-brand" href="{{url('/home')}}">Dashboard</a>
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link {{ Request::is('accesses') ? 'active' : '' }}" role="button" href="/accesses">Acessos</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link {{ Request::is('services') ? 'active' : '' }}" role="button" href="/services">Serviços</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link {{ Request::is('organizations/1') ? 'active' : '' }}" role="button" href="/organizations/1">Empresa</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link {{ Request::is('images') ? 'active' : '' }}" role="button" href="/images">Imagens</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link {{ Request::is('videos') ? 'active' : '' }}" role="button" href="/videos">Videos</a>
-                            </li>
-                        </ul>
-                    </div>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
