@@ -29,12 +29,8 @@ class ImageController extends Controller
     {
         $images = Image::with(['service']);
         $services = Service::all();
-<<<<<<< Updated upstream
-        return view('dashboard.pages.imagens.createimagens', ['images' => $images, 'services' => $services]);
-=======
         return view('dashboard.pages.imagens.createimagens', ['images' => $images,'services' => $services]);
 
->>>>>>> Stashed changes
     }
 
     /**
@@ -46,22 +42,13 @@ class ImageController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-<<<<<<< Updated upstream
-            'image'                => 'required',
-=======
             'image'              => 'required',
->>>>>>> Stashed changes
             'service_id'         => 'required',
         ]);
 
-<<<<<<< Updated upstream
         $image = new Image();
         $image->image              = $request->image;
         $image->service_id        = $request->service_id;
-=======
-        $image                      = new Image();
-        $image->service_id          = $request->service_id;
->>>>>>> Stashed changes
         $image->save();
 
         //If we have an image file, we store it, and move it in the database
@@ -89,12 +76,8 @@ class ImageController extends Controller
      */
     public function show(Image $image)
     {
-<<<<<<< Updated upstream
-        //return view('dashboard.pages.imagens.showimagens');
-=======
         $services = Service::all();
         return view('dashboard.pages.imagens.showimagens', ['image'=>$image, 'services'=>$services]);
->>>>>>> Stashed changes
     }
 
     /**
@@ -105,15 +88,9 @@ class ImageController extends Controller
      */
     public function edit(Image $image)
     {
-<<<<<<< Updated upstream
         $images = Image::with(['service']);
         $services = Service::all();
         return view('dashboard.pages.imagens.editimagens', ['image' => $image, 'services' => $services]);
-=======
-        $services = Service::all();
-        return view('dashboard.pages.imagens.editimagens', ['image'=> $image, 'services'=> $services]);
-
->>>>>>> Stashed changes
     }
 
     /**
@@ -125,15 +102,6 @@ class ImageController extends Controller
      */
     public function update(Request $request, Image $image)
     {
-<<<<<<< Updated upstream
-        $image->update($request->all());
-        return redirect('images')->with('status', 'Item edited successfully!');
-
-        $image = Video::find($image->id);
-        $image->image = $request->image;
-        $image->service_id = $request->service_id;
-        $image->save();
-=======
         Storage::deleteDirectory('public/images/images/' . $image->id);
         $image                      = Image::find($image->id);
         $image->image               = $request->image;
@@ -156,7 +124,6 @@ class ImageController extends Controller
         return redirect('images')->with('status','Item created successfully!');
 
 
->>>>>>> Stashed changes
     }
 
     /**
@@ -168,10 +135,6 @@ class ImageController extends Controller
     public function destroy(Image $image)
     {
         Storage::deleteDirectory('public/images/images/' . $image->id);
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
         $image = Image::find($image->id);
         $image->delete();
         return redirect('images')->with('status','Item deleted successfully!');

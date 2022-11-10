@@ -1,6 +1,3 @@
-<<<<<<< Updated upstream
-
-=======
 <h1 class="text-center"> Editar imagem </h1>
 <div class="container">
     <div class="row bg-light rounded-3">
@@ -83,4 +80,3 @@
         output.src = URL.createObjectURL(event.target.files[0]);
     }
 </script>
->>>>>>> Stashed changes

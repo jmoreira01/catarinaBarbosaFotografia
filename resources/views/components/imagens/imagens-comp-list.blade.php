@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 <div class="container align-items-center">
     <div class="row align-items-start">
         <div class="col-10">
@@ -55,4 +53,3 @@
     </table>
 </div>
 
->>>>>>> Stashed changes

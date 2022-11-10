@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 <h1 class="text-center"> Imagens </h1>
 <div class="container bg-light rounded-3">
     <div>
@@ -52,4 +50,3 @@
 
 
 
->>>>>>> Stashed changes
