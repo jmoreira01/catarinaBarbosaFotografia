@@ -1,7 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css);
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
-
 :root {
     scroll-behavior: smooth;
 }
@@ -35,7 +34,6 @@
 }
 
 /* CSS Pagina Principal
-
 html, body {
     background-color: #fff;
     color: #636b6f;
@@ -44,35 +42,28 @@ html, body {
     height: 100vh;
     margin: 0;
 }
-
 .full-height {
     height: 100vh;
 }
-
 .flex-center {
     align-items: center;
     display: flex;
     justify-content: center;
 }
-
 .position-ref {
     position: relative;
 }
-
 .top-right {
     position: absolute;
     right: 10px;
     top: 18px;
 }
-
 .content {
     text-align: center;
 }
-
 .title {
     font-size: 84px;
 }
-
 .links > a {
     color: #636b6f;
     padding: 0 25px;
@@ -82,10 +73,8 @@ html, body {
     text-decoration: none;
     text-transform: uppercase;
 }
-
 .m-b-md {
     margin-bottom: 30px;
 }
 */
-
------------------------------------------/* CSS CATARINA */ -------------------------------------------------------
+/* ----------------------------------------- CSS CATARINA -------------------------------------------------------*/

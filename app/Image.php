@@ -9,6 +9,11 @@ class Image extends Model
 {
     use SoftDeletes;
 
+    public function service()
+    {
+        return $this->belongsTo('App\Service');
+    }
+
 
     protected $fillable = [
         'image',

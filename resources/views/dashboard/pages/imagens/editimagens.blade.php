@@ -9,7 +9,11 @@
 @section('content')
 
 
+<<<<<<< Updated upstream
     @component('components.imagens.imagens-comp-edit', ['image' => $image, 'services' => $services])
+=======
+    @component('components.imagens.imagens-comp-edit', ['image'=> $image, 'services'=> $services])
+>>>>>>> Stashed changes
     @endcomponent
 
 @stop

@@ -14,8 +14,9 @@ class ServiceController extends Controller
      */
     public function index()
     {
+
         $services = Service::all();
-        return view('dashboard.pages.servicos.indexservicos');
+        return view('dashboard.pages.servicos.indexservicos', ['services'=> $services]);
     }
 
     /**
@@ -57,7 +58,7 @@ class ServiceController extends Controller
      */
     public function show(Service $service)
     {
-        return view('dashboard.pages.servicos.showservicos');
+        return view('dashboard.pages.servicos.showservicos', ['service'=> $service]);
     }
 
     /**
@@ -68,8 +69,7 @@ class ServiceController extends Controller
      */
     public function edit(Service $service)
     {
-        $services = Service::all();
-        return view('dashboard.pages.servicos.editservicos');
+        return view('dashboard.pages.servicos.editservicos', ['service' => $service]);
     }
 
     /**

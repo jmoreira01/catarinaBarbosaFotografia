@@ -9,7 +9,7 @@
 @section('content')
 
 
-    @component('components.servicos.servicos-comp-list')
+    @component('components.servicos.servicos-comp-list', ['services'=> $services])
     @endcomponent
 
 @stop

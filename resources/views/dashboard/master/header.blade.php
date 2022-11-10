@@ -1,42 +1,50 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark m-4 ">
-    <a class="navbar-brand" href="{{url('/')}}">Home</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">
-                    Pets
-                </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="">List</a>
-                    <a class="dropdown-item" href="">Add Pet</a>
-                </div>
-            </li>
-        </ul>
-        <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">
-                    People
-                </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="">List</a>
-                    <a class="dropdown-item" href="">Add Person</a>
-                </div>
-            </li>
-        </ul>
+<nav class="navbar navbar-expand-lg bg-light shadow-sm mb-4">
+    <div class="container">
+        <a class="navbar-brand" href="{{url('/home')}}">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('accesses') ? 'active' : '' }}" role="button" href="/accesses">Acessos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('services') ? 'active' : '' }}" role="button" href="/services">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('organizations/1') ? 'active' : '' }}" role="button"
+                       href="/organizations/1">Empresa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('images') ? 'active' : '' }}" role="button"
+                       href="/images">Imagens</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('videos') ? 'active' : '' }}" role="button"
+                       href="/videos">Videos</a>
+                </li>
 
-        <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">
-                    Address
-                </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="">List</a>
-                    <a class="dropdown-item" href="">Add Address</a>
-                </div>
-            </li>
-        </ul>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        {{ Auth::user()->name }}
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="/"
+                               onclick="event.preventDefault();
+                           document.getElementById('logout-form').submit();">
+                                Logout
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
