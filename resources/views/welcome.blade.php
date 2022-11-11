@@ -17,13 +17,15 @@
         <!-- SwiperJS  CDN -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
         <!-- Imagem shortcut barra de navegação -->
-        <link rel="shortcut icon" href="img/Rosa_.png" type="image/x-icon">
+        <link rel="shortcut icon" href="{{'storage/'.$organizations->logo}}" type="image/x-icon">
     </head>
     <body>
     <!-- NavBar -->
     <nav>
         <div class="container nav__container">
-            <a href="/"class="nav_logo"><img src="img/Rosa.png" alt="Logo"></a>
+            <a href="/" class="nav_logo">
+                <img src="{{ asset('storage/'.$organizations->logo) }}" alt="Logo">
+            </a>
             <ul class="nav__links">
                 <li><a href="/">Home</a></li>
                 <li><a href="#about">Sobre Mim</a></li>

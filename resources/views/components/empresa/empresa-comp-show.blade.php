@@ -1,6 +1,20 @@
 <div class="container">
     <form method="GET" action="{{ url('organizations/{organization}')}}">
         @csrf
+
+        <!-- ======================== Imagem ============================== -->
+        <div class="col m-2">
+            @if ($organization->logo)
+                <img class="w-25 img-responsive rounded-3"
+                     src="{{ asset('storage/'.$organization->logo) }}"
+                     style="border-radius: 10px; border-color:
+                     black; border-style:
+                     solid "></a>
+            @else
+                <p>No Image</p>
+            @endif
+        </div>
+
         <div class="form-row">
             <div class="col-md-4 mb-3">
                 <label for="name">Empresa:</label>

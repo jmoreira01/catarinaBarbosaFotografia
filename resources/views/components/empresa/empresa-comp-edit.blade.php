@@ -1,8 +1,10 @@
 <div class="container">
-    <form method="POST" action="{{ url('organizations/' . $organization->id) }}">
+    <form method="POST" action="{{ url('organizations/' . $organization->id) }}" enctype="multipart/form-data">
     @csrf
     @method('PUT')
-        <div class="form-group my-3">    <label for="logo" class="mb-2">Logo</label>    <input
+        <div class="form-group my-3">
+            <label for="logo" class="mb-2">Logo</label>
+            <input
                 type="file"
                 id="logo"
                 name="logo"
@@ -10,7 +12,6 @@
                 autocomplete="logo"
                 style="width: 40%"
                 class="form-control
-
             @error('logo') is-invalid @enderror"
                 value="{{ old('logo') }}"
                 required>
@@ -19,7 +20,9 @@
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
+            <span><strong>*Por favor insira uma imagem sem fundo/transparente</strong></span>
         </div>
+
 
     <div class="form-row">
         <div class="col-md-4 mb-3">
