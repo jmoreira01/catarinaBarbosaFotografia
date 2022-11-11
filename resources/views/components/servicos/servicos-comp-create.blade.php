@@ -51,7 +51,7 @@
 
         <button type="submit" class="mt-2 mb-5 btn btn-primary">Criar</button>
 
-        <a href="{{url('/services')}}" class="mt-2 mb-5 mr-2 btn btn-outline-info">Voltar</a>
+        <a href="{{url('/services')}}" class="mt-2 mb-3 btn btn-outline-secondary"><i class="bi bi-arrow-return-left"></i> Voltar</a>
 
     </form>
 </div>

@@ -1,80 +1,25 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css);
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 :root {
     scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    --color-background: #E9ECEF;
 }
 
-.row {
-    display: flex;
+body {
+    background-color: var(--color-background);
+}
+.efeito3d{
+    border-radius: 15px;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 3px 3px black;
 }
 
-.column {
-    flex: 50%;
+.inputbox{
+    border-color: black;
+    border-style: solid;
+    border-width: 2px
 }
-
-.tag-service {
-    background-color: #FFFFFF;
-    border: 1px solid #222222;
-    border-radius: 8px;
-    box-sizing: border-box;
-    color: #222222;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 20px;
-    margin-top: 10px;
-    outline: none;
-    padding: 13px 23px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    touch-action: manipulation;
-    width: auto;
-}
-
-/* CSS Pagina Principal
-html, body {
-    background-color: #fff;
-    color: #636b6f;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 200;
-    height: 100vh;
-    margin: 0;
-}
-.full-height {
-    height: 100vh;
-}
-.flex-center {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-.position-ref {
-    position: relative;
-}
-.top-right {
-    position: absolute;
-    right: 10px;
-    top: 18px;
-}
-.content {
-    text-align: center;
-}
-.title {
-    font-size: 84px;
-}
-.links > a {
-    color: #636b6f;
-    padding: 0 25px;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-.m-b-md {
-    margin-bottom: 30px;
-}
-*/
-/* ----------------------------------------- CSS CATARINA -------------------------------------------------------*/

@@ -19,14 +19,14 @@
         </button>
     </div>
 @endif
-<div class="container">
 
+<div class="container efeito3d">
     <table class="table table-striped">
         <thead>
         <tr>
             <th scope="col" class="align-middle">Nome</th>
             <th scope="col" class="align-middle">Testemunho</th>
-            <th scope="col" class="align-middle">Visibilidade</th>
+            <th scope="col" class="align-middle text-center">Visibilidade</th>
         </tr>
         </thead>
         <tbody class="table-group-divider">
@@ -34,7 +34,7 @@
             <tr>
                 <td class="align-middle">{{$testimonal->name}}</td>
                 <td class="align-middle">{{$testimonal->comment}} </td>
-                <td class="align-middle">
+                <td class="align-middle text-center">
                     @if($testimonal->visibility == 0)
                         <i class="bi bi-dash-circle" style="color: red; font-size: 25px; align-items: center"></i>
                     @else

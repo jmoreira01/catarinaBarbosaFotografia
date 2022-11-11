@@ -1,17 +1,16 @@
-<h1 class="text-center"> Serviços </h1>
-<div class="container bg-light rounded-3">
+<h1 class="text-center"> Testemunhos </h1>
+<div class="container bg-light efeito3d">
     <div>
-        @csrf
         <!--================== NAME ==================-->
-        <div class="form-group">
-            <label for="name">Nome</label>
+        <div class="form-group my-2 " >
+            <h4 for="name">Nome</h4>
             <input
                 type="text"
                 id="name"
                 name="name"
                 autocomplete="name"
                 placeholder="Type your name"
-                class="form-control"
+                class="form-control inputbox"
                 value="{{($testimonal->name)}}"
                 disabled
                 aria-describedby="nameHelp">
@@ -19,38 +18,38 @@
 
         <!--================== DESCRIPTION ==================-->
         <div class="form-group">
-            <label for="comment">Testemunho</label>
+            <h4  for="comment">Testemunho</h4>
             <textarea
                 type="text"
                 id="comment"
                 name="comment"
                 autocomplete="comment"
-                class="form-control"
-                style="height: 150px"
+                class="form-control inputbox"
+                style="height: 150px;"
                 disabled
                 aria-describedby="nameHelp">{{($testimonal->comment)}}
                 </textarea>
         </div>
 
         <!--================== VISIBILITY ==================-->
-        <div class="form-floating my-3">
-            <label for="visibility">Visibilidade
-            </label>
-            <br>
-            <br>
+        <div class="form-group my-3">
+            <h4 for="visibility">Visibilidade
+            </h4>
+
             <div class="form-check form-check-inline">
                 <input
                     type="radio"
                     id="visibilityYES"
                     name="visibility"
                     autocomplete="visibility"
+                    style="margin-left: 1px"
                     value="1"
                     {{($testimonal->visibility) == 1 ? 'checked' : '' }}
                     disabled
-                    class="form-check-input ">
+                    class="form-check-input">
 
                 <label class="form-check-label"
-                       for="visibilityYES">Yes
+                       for="visibilityYES"> &nbsp; Visivél
                 </label>
             </div>
             <div class="form-check form-check-inline">
@@ -65,7 +64,7 @@
                     class="form-check-input">
 
                 <label class="form-check-label"
-                for="visibilityNo">No
+                for="visibilityNo">Não Visível
                 </label>
             </div>
 
@@ -75,14 +74,14 @@
         <!--================== BUTTON ==================-->
         <div class="row">
             <div class="col-auto me-auto">
-                <a href="{{url('/testimonals')}}" class="mt-2 mb-5 mr-2 btn btn-outline-info">Voltar</a>
-                <a href="{{url('testimonals/' . $testimonal->id . '/edit')}}" class="mt-2 mb-5 ml-2 btn btn-warning" style="width: 110px">Editar <i class="bi bi-pen"></i> </a>
+                <a href="{{url('/testimonals')}}" class="mt-2 mb-3 btn btn-outline-secondary"><i class="bi bi-arrow-return-left"></i> Voltar</a>
+                <a href="{{url('testimonals/' . $testimonal->id . '/edit')}}" class="mt-2 mb-3 ml-2 btn btn-outline-primary" style="width: 110px">Editar <i class="bi bi-pen"></i> </a>
             </div>
             <div class="col-auto">
                 <form action="{{url('testimonals/' . $testimonal->id)}}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="mt-2 mb-5 mr-2 btn btn-danger" style="width: 110px">Eliminar <i class="bi bi-trash3"></i> </button>
+                    <button type="submit" class="mt-2 mb-3 mr-2 btn btn-danger" style="width: 110px">Eliminar <i class="bi bi-trash3"></i> </button>
                 </form>
             </div>
         </div>

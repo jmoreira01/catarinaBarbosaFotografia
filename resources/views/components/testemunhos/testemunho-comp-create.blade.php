@@ -1,19 +1,19 @@
-<h1 class="text-center"> Serviços </h1>
-<div class="container bg-light rounded-3">
+<h1 class="text-center"> Novo Testemunho </h1>
+<div class="container bg-light efeito3d ">
     <form method="POST" action="{{ url('testimonals')}}">
         @csrf
 
 
         <!--================== NAME ==================-->
-        <div class="form-group">
-            <label for="name">Nome</label>
+        <div class="form-group my-3">
+            <h4 for="name">Nome</h4>
             <input
                 type="text"
                 id="name"
                 name="name"
                 autocomplete="name"
                 placeholder="Insira o seu nome"
-                class="form-control"
+                class="form-control inputbox"
                 aria-describedby="nameHelp"
                 >
 
@@ -21,13 +21,13 @@
 
         <!--================== TESTIMONALS ==================-->
         <div class="form-group">
-            <label for="comment">Testemunho</label>
+            <h4 for="comment">Testemunho</h4>
             <textarea
                 type="text"
                 id="comment"
                 name="comment"
                 autocomplete="comment"
-                class="form-control"
+                class="form-control inputbox"
                 style="height: 150px"
                 aria-describedby="nameHelp"></textarea>
         </div>
@@ -49,8 +49,8 @@
         <!--================== BUTTON ==================-->
         <div class="row">
             <div class="col-auto me-auto">
-                <a href="{{url('/testimonals')}}" class="mt-2 mb-5 mr-2 btn btn-outline-info">Voltar</a>
-                <button type="submit" class="mt-2 mb-5 btn btn-outline-success">Salvar</button>
+                <a href="{{url('/testimonals')}}" class="mt-2 mb-3 btn btn-outline-secondary"><i class="bi bi-arrow-return-left"></i> Voltar</a>
+                <button type="submit" class="mt-2 mb-3 ml-2 btn btn-outline-primary" style="width: 110px">Salvar <i class="bi bi-check-lg"></i></button>
             </div>
         </div>
     </form>
