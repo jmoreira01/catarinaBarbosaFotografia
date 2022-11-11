@@ -10,6 +10,7 @@ class Organization extends Model
     use SoftDeletes;
 
     protected $fillable = [
+        'logo'        ,
         'name'        ,
         'email'       ,
         'phone_number',

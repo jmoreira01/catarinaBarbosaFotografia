@@ -17,10 +17,15 @@ class WelcomeController extends Controller
      */
     public function index()
     {
+        $organizations_id = 1;
+
+
+
         $videos = Video::all();
         $images = Image::all();
         $services = Service::all();
-        $organizations = Organization::all();
+        $organizations = Organization::find($organizations_id);
+
 
         return view('welcome', ['videos' => $videos, 'images' => $images , 'services' => $services, 'organizations' => $organizations]);
     }

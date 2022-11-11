@@ -24,7 +24,7 @@ class OrganizationController extends Controller
      */
     public function create()
     {
-        //return view('dashboard.pages.empresa.createempresa');
+        //
     }
 
     /**
@@ -36,6 +36,7 @@ class OrganizationController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
+            'logo'               => 'required',
             'name'               => 'required',
             'email'              => 'required',
             'phone_number'       => 'required',
@@ -50,16 +51,17 @@ class OrganizationController extends Controller
         ]);
 
         $organization = new Organization();
-        $organization->name               = $request->name;
-        $organization->email        = $request->email;
-        $organization->phone_number        = $request->phone_number;
-        $organization->address       = $request->address;
-        $organization->city        = $request->city;
-        $organization->country       = $request->country;
-        $organization->postal_code        = $request->postal_code;
-        $organization->facebook       = $request->facebook;
+        $organization->logo           = $request->logo;
+        $organization->name             = $request->name;
+        $organization->email            = $request->email;
+        $organization->phone_number     = $request->phone_number;
+        $organization->address          = $request->address;
+        $organization->city             = $request->city;
+        $organization->country          = $request->country;
+        $organization->postal_code      = $request->postal_code;
+        $organization->facebook         = $request->facebook;
         $organization->instagram        = $request->instagram;
-        $organization->linkedin        = $request->linkedin;
+        $organization->linkedin         = $request->linkedin;
         $organization->save();
 
         return redirect('organizations')->with('status','Item created successfully!');
@@ -98,7 +100,22 @@ class OrganizationController extends Controller
      */
     public function update(Request $request, Organization $organization)
     {
-        $organization->update($request->all());
+        $organization                     = Organization::find($organization->id);
+
+        $organization->logo             = $request->logo;
+        $organization->name             = $request->name;
+        $organization->email            = $request->email;
+        $organization->phone_number     = $request->phone_number;
+        $organization->address          = $request->address;
+        $organization->city             = $request->city;
+        $organization->country          = $request->country;
+        $organization->postal_code      = $request->postal_code;
+        $organization->facebook         = $request->facebook;
+        $organization->instagram        = $request->instagram;
+        $organization->linkedin         = $request->linkedin;
+
+        $organization->save();
+
         return redirect('organizations/1')->with('status','Item edited successfully!');
     }
 

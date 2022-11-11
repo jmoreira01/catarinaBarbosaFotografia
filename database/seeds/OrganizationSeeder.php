@@ -20,7 +20,7 @@ class OrganizationSeeder extends Seeder
             'city' => 'Marco Canaveses',
             'country' => 'Portugal',
             'postal_code' => '4630-000',
-            'facebook' => 'https://www.facebook/CatarinaBarbosaFotografia',
+            'facebook' => 'https://www.facebook.com/CatarinaBarbosaFotografia',
             'instagram' => 'https://www.instagram.com/catarinabarbosafotografia/',
             'linkedin' => ' '
         ]);

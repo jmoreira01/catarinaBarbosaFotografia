@@ -2,6 +2,24 @@
     <form method="POST" action="{{ url('organizations/' . $organization->id) }}">
     @csrf
     @method('PUT')
+        <div class="form-group my-3">    <label for="logo" class="mb-2">Logo</label>    <input
+                type="file"
+                id="logo"
+                name="logo"
+                onchange="loadFile(event)"
+                autocomplete="logo"
+                style="width: 40%"
+                class="form-control
+
+            @error('logo') is-invalid @enderror"
+                value="{{ old('logo') }}"
+                required>
+            @error('logo')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
+        </div>
 
     <div class="form-row">
         <div class="col-md-4 mb-3">
@@ -103,7 +121,6 @@
                     placeholder="link"
                     class="form-control">
             </div>
-
             <div class="col-md-6 mb-3">
                 <label for="instagram">Instagram: </label>
                 <input
@@ -129,4 +146,15 @@
         </div>
         <button type="submit" class="mt-2 mb-5 btn btn-primary">Submit</button>
     </form>
+<div class="col text-center m-2">
+    <img id="output" height="300px" class="rounded-3">
 </div>
+</div>
+
+
+<script>
+    function loadFile(event) {
+        let output = document.getElementById('output');
+        output.src = URL.createObjectURL(event.target.files[0]);
+    }
+</script>

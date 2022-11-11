@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -32,8 +33,10 @@
             </ul>
             <!-- Social Medias -->
             <ul class="nav__socials">
-                <li><a href="https://www.facebook.com/CatarinaBarbosaFotografia" target="_blank"><i class="uil uil-facebook"></i></a></li>
-                <li><a href="https://instagram.com/catarinabarbosafotografia?igshid=YmMyMTA2M2Y=" target="_blank"><i class="uil uil-instagram-alt"></i></a></li>
+
+                <li><a href="{{ $organizations -> facebook}}" alt="" target="_blank"><i class="uil uil-facebook"></i></a></li>
+                <li><a href="{{ $organizations -> instagram}}" target="_blank"><i class="uil uil-instagram-alt"></i></a></li>
+                <li><a href="{{ $organizations -> linkedin}}" target="_blank"><i class="uil uil-linkedin-alt"></i></a></li>
                 <li><a href="{{ route('login') }}" target="_blank"><i class="uil uil-envelope-upload-alt"></i></a></li>
             </ul>
             <!-- Design avaiable for mobiles and tablets only -->
@@ -125,27 +128,15 @@
             </p>
         </div>
         <!-- Swiper -->
+
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="img/image 6.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/image 7.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/image 8.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/image 9.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/image 5.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/image 5.jpg" alt="">
-                </div>
 
+                        @foreach($images->take(12) as $image )
+                            <div class="swiper-slide">
+                                <img src="{{ asset('storage/'.$image->image) }}" alt="">
+                            </div>
+                        @endforeach
             </div>
             <div class="swiper-pagination"></div>
         </div>
