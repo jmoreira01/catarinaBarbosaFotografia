@@ -66,3 +66,12 @@ Route::get('/videos/{video}', 'VideoController@show');
 Route::get('/videos/{video}/edit', 'VideoController@edit');
 Route::put('/videos/{video}', 'VideoController@update');
 Route::delete('/videos/{video}', 'VideoController@destroy');
+
+// Testimonals
+Route::get('/testimonals', 'TestimonalController@index');
+Route::get('/testimonals/create', 'TestimonalController@create');
+Route::post('/testimonals', 'TestimonalController@store');
+Route::get('/testimonals/{testimonal}', 'TestimonalController@show');
+Route::get('/testimonals/{testimonal}/edit', 'TestimonalController@edit');
+Route::put('/testimonals/{testimonal}', 'TestimonalController@update');
+Route::delete('/testimonals/{testimonal}', 'TestimonalController@destroy');

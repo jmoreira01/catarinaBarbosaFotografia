@@ -65,6 +65,14 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col">
+                                <div class="card">
+                                    <a href="/testimonals"><img src="img/exemplo.jpg" class="card-img-top" alt="..."></a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">TESTEMUNHOS</h5>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

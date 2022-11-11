@@ -25,6 +25,10 @@
                     <a class="nav-link {{ Request::is('videos') ? 'active' : '' }}" role="button"
                        href="/videos">Videos</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('testimonals') ? 'active' : '' }}" role="button"
+                       href="/testimonals">Testemunhos</a>
+                </li>
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
