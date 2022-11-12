@@ -18,7 +18,7 @@
         </button>
     </div>
 @endif
-<div class="container">
+<div class="container efeito3d">
 
     <table class="table table-striped">
         <thead>
@@ -43,7 +43,7 @@
                 <td class="align-middle text-center">
                     <div class="pr-1 m-1">
                         <a href="{{url('images/' . $image->id)}}" type="button" class="btn btn-outline-success"
-                           style="width: 75px">Ver <i class="bi bi-eye"></i> </a>
+                           style="width: 75px"> <strong> Ver </strong>  <i class="bi bi-eye"></i> </a>
                     </div>
                 </td>
             </tr>

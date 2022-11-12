@@ -1,6 +1,6 @@
 <h1 class="text-center"> Nova imagem </h1>
 <div class="container">
-    <div class="row bg-light rounded-3">
+    <div class="row bg-light efeito3d">
         <div class="col">
             <div class="container">
                 <form method="POST" action="{{ url('/images') }}" enctype="multipart/form-data">
@@ -8,15 +8,14 @@
 
                     <!-- ======================== Input Serviço ============================== -->
                     <div class="form-group my-3">
-                        <label for="service" class="mb-2">Serviço</label>
-                        <br>
+                        <h4 for="service" class="mb-2">Serviço</h4>
                         <select
                             type="text"
                             id="service_id"
                             name="service_id"
                             autocomplete="service"
                             style="width: 100%"
-                            class="form-control
+                            class="form-select inputbox mb-1
                             @error('service') is-invalid @enderror"
                             required>
 
@@ -38,7 +37,7 @@
 
                     <!-- ======================== Input Imagem ============================== -->
                     <div class="form-group my-3">
-                        <label for="image" class="mb-2">Imagem</label>
+                        <h4 for="image" class="mb-2">Imagem</h4>
                         <input
                             type="file"
                             id="image"
@@ -46,7 +45,7 @@
                             onchange="loadFile(event)"
                             autocomplete="image"
                             style="width: 100%"
-                            class="form-control
+                            class="form-control inputbox
                                 @error('image') is-invalid @enderror"
                             value="{{ old('image') }}"
                             required>
@@ -60,10 +59,9 @@
 
 
                     <!-- ======================== Botão ============================== -->
+                    <a href="{{url('/images')}}" class="mt-2 mb-3 btn btn-outline-secondary"><i class="bi bi-arrow-return-left"></i> <strong> Voltar </strong> </a>
 
-                    <button type="submit" class="m-2 btn btn-primary">Criar</button>
-
-                    <a href="{{url('/images')}}" class="m-2 btn btn-outline-info">Voltar</a>
+                    <button type="submit" class="mt-2 mb-3 ml-2 btn btn-outline-primary" style="width: 110px"> <strong> Guardar </strong> <i class="bi bi-check-lg"></i></button>
 
                 </form>
             </div>
