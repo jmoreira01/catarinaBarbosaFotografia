@@ -1,4 +1,4 @@
-<div class="container align-items-center">
+<div class="container align-items-center ">
     <div class="row align-items-start">
         <div class="col-10">
             <h1 class="text-center"> Serviços </h1>
@@ -19,12 +19,12 @@
         </button>
     </div>
 @endif
-<div class="container">
+<div class="container efeito3d ">
 
-    <table class="table table-striped">
+    <table class="table table-striped text-center">
         <thead>
         <tr>
-            <th scope="col" class="align-middle">Nome</th>
+            <th scope="col" class="align-middle">Serviço</th>
             <th scope="col" class="align-middle">Descrição</th>
             <th scope="col" class="align-middle"></th>
         </tr>
@@ -37,7 +37,7 @@
                 <td class="align-middle text-center">
                     <div class="pr-1 m-1">
                         <a href="{{url('services/' . $service->id)}}" type="button" class="btn btn-outline-success"
-                           style="width: 75px">Ver <i class="bi bi-eye"></i> </a>
+                           style="width: 75px"> <strong>Ver</strong> <i class="bi bi-eye"></i> </a>
                     </div>
                 </td>
             </tr>

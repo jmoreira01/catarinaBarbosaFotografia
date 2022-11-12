@@ -1,12 +1,12 @@
 <h1 class="text-center"> Serviços </h1>
-<div class="container bg-light rounded-3">
+<div class="container bg-light efeito3d">
     <form method="POST" action="{{ url('services/' . $service->id) }}">
         @csrf
         @method('PUT')
 
-        <!-- ======================== Input Nome ============================== -->
-        <div class="form-group">
-            <label for="name">Nome</label>
+        <!-- ======================== NAME ============================== -->
+        <div class="form-group my-3">
+            <h4 for="name">Nome</h4>
             <input
                 type="text"
                 id="name"
@@ -14,27 +14,35 @@
                 value="{{ $service -> name}}"
                 autocomplete="name"
                 placeholder="Type your name"
-                class="form-control">
+                class="form-control inputbox">
 
         </div>
 
-        <!-- ======================== Input Descrição ============================== -->
+        <!-- ======================== DESCRIPTION ============================== -->
         <div class="form-group">
-            <label for="description">Descrição</label>
+            <h4 for="description">Descrição</h4>
             <textarea
                 type="text"
                 id="description"
                 name="description"
-                class="form-control"
+                class="form-control inputbox"
                 style="height: 150px"
                 placeholder="Type your description"> {{ $service -> description}} </textarea>
         </div>
 
-        <!-- ======================== Botão ============================== -->
-
-        <button type="submit" class="mt-2 mb-5 btn btn-primary">Salvar</button>
-
-        <a href="{{url('/services')}}" class="mt-2 mb-5 mr-2 btn btn-outline-info">Voltar</a>
-
+        <!-- ======================== BUTTON  ============================== -->
+        <a
+            href="{{url('/services')}}"
+            class="mt-2 mb-3 btn btn-outline-secondary">
+            <i class="bi bi-arrow-return-left"></i>
+            <strong>Voltar</strong>
+        </a>
+        <button
+            type="submit"
+            class="mt-2 mb-3 ml-2 btn btn-outline-primary"
+            style="width: 110px">
+            <strong>Guardar</strong>
+            <i class="bi bi-check-lg"></i>
+        </button>
     </form>
 </div>

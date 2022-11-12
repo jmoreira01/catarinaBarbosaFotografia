@@ -91,8 +91,19 @@
         <!--================== BUTTON ==================-->
         <div class="row">
             <div class="col-auto me-auto">
-                <a href="{{url('/testimonals')}}" class="mt-2 mb-3 btn btn-outline-secondary"><i class="bi bi-arrow-return-left"></i> Voltar</a>
-                <button type="submit" class="mt-2 mb-3 ml-2 btn btn-outline-primary" style="width: 110px">Salvar <i class="bi bi-check-lg"></i></button>
+                <a
+                    href="{{url('/testimonals')}}"
+                    class="mt-2 mb-3 btn btn-outline-secondary">
+                    <i class="bi bi-arrow-return-left"></i>
+                    <strong>Voltar</strong>
+                </a>
+                <button
+                    type="submit"
+                    class="mt-2 mb-3 ml-2 btn btn-outline-primary"
+                    style="width: 110px">
+                    <strong>Guardar</strong>
+                    <i class="bi bi-check-lg"></i>
+                </button>
             </div>
         </div>
 </form>

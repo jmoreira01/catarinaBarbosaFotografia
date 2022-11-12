@@ -140,7 +140,7 @@
                 <input
                     type="url"
                     id="linkedin"
-                    name="flinkedin"
+                    name="linkedin"
                     autocomplete="linkedin"
                     value="{{ $organization -> linkedin}}"
                     placeholder="link"

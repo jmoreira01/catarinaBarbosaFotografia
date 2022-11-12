@@ -1,18 +1,17 @@
-<div class="container" style="margin: auto;
-  width: 30%;
-  padding: 30px;
-  margin-top: 100px;">
+<h1 style="text-align: center"> Novo Vídeo</h1>
+<br>
+<div class="container bg-light efeito3d">
     <form method="POST" action="{{ url('videos') }}" enctype="multipart/form-data">
         @csrf
 
-        <div class="form-group">
-            <label for="video"> Video Url</label>
+        <div class="form-group my-3">
+            <h4 for="video"> Video Url</label>
             <input
                 type="text"
                 id="url"
                 name="url"
                 autocomplete="url"
-                class="form-control
+                class="form-control inputbox
                 @error('url') is-invalid @enderror"
                 value="{{ old('url') }}"
                 required>
@@ -25,11 +24,11 @@
         </div>
 
         <div class="form-group">
-            <label for="service">Serviço</label>
+            <h4 for="service">Serviço</h4>
             <select
                 id="service_id"
                 name="service_id"
-                class="form-control
+                class="form-control inputbox
                 mb-1">
 
                 @foreach($services as $service)
@@ -39,6 +38,12 @@
         </div>
 
 
-        <button type="submit" class="mt-2 mb-5 btn btn-primary">Submit</button>
+        <button
+            type="submit"
+            class="mt-2 mb-3 ml-2 btn btn-outline-primary"
+            style="width: 110px">
+            <strong>Guardar</strong>
+            <i class="bi bi-check-lg"></i>
+        </button>
     </form>
 </div>
