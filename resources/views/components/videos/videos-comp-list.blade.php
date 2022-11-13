@@ -4,8 +4,6 @@
 <div class="m-4">
     <div class="videos-header text-center align-content-lg-center">
     <h1>Videos</h1>
-        <div class="col-1">
-        </div>
     </div>
     <div class="row row-cols-1 row-cols-md-3 g-4"
          style="
@@ -14,10 +12,10 @@
 
         @foreach($videos as $video)
 
-        <div class="col efeito3d">
+        <div class="col  efeito3d mx-1">
             <div class="card" style="
-                width: 576px;
-                height: 155px;
+                max-width:576px;
+                max-height: 155px;
                 display:inline;
                 margin-left: auto;
                 margin-right: auto;
@@ -30,7 +28,6 @@
 
                 <div class="card-body">
                     <div class="btn-group" role="group" aria-label="Basic outlined example">
-
                         <a
                             href="{{url('videos/' . $video->id . '/edit')}}"
                             class="mt-2 mb-3 ml-2 btn btn-outline-primary"

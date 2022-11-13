@@ -1,26 +1,15 @@
-@extends('layouts.app')
+@extends('dashboard.master.main')
+
+@section('styles')
+@stop
+
+@section('scripts')
+@stop
+
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                    {{ __('Benvinda ao Painel de Gestão') }}
-                </div>
-                <div>
                 @component('components.dashboard')
                 @endcomponent
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 @endsection

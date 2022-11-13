@@ -18,6 +18,41 @@ body {
     box-shadow: 3px 3px black;
 }
 
+.img_dashboard{
+    width: 50%;
+    border-radius: 30px;
+    margin-top: 20px;
+
+}
+
+.efeito3d_img1, .efeito3d_img2, .efeito3d_img3, .efeito3d_img4, .efeito3d_img5, .efeito3d_img6 {
+
+    border-radius: 15px;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 3px 3px black;
+
+}
+.efeito3d_img1:hover{
+  background-color: #E8A598;
+}
+.efeito3d_img2:hover{
+    background-color: #FEC5BB;
+}
+.efeito3d_img3:hover{
+    background-color: #FAE1DD;
+}
+.efeito3d_img4:hover{
+    background-color: #FAE1DD;
+}
+.efeito3d_img5:hover{
+    background-color: #F9DCC4;
+}
+.efeito3d_img6:hover{
+    background-color: #FEC89A;
+}
+
 .inputbox{
     border-color: black;
     border-style: solid;
@@ -32,9 +67,4 @@ body {
     color: red;
 }
 
-/*
-.nav-link.active{
-    text-decoration-color: red;
-}
-*/
 

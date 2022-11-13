@@ -39,7 +39,7 @@
                 <li><a href="{{ $organizations -> facebook}}" alt="" target="_blank"><i class="uil uil-facebook"></i></a></li>
                 <li><a href="{{ $organizations -> instagram}}" target="_blank"><i class="uil uil-instagram-alt"></i></a></li>
                 <li><a href="{{ $organizations -> linkedin}}" target="_blank"><i class="uil uil-linkedin-alt"></i></a></li>
-                <li><a href="{{ route('login') }}" target="_blank"><i class="uil uil-envelope-upload-alt"></i></a></li>
+                <li><a href="{{ route('login') }}"><i class="uil uil-envelope-upload-alt"></i></a></li>
             </ul>
             <!-- Design avaiable for mobiles and tablets only -->
             <button class="nav__toggle-btn" id="nav__toogle-open"><i class="uil uil-bars"></i></button>
@@ -143,8 +143,6 @@
             <div class="swiper-pagination"></div>
         </div>
     </div>
-
-
 
     <!-- SwiperJS - note: para que tudo funcione todos os links são necessários, não fiz via npm para facilicar na transição para o Laravel -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
