@@ -33,7 +33,7 @@
         @foreach($services as $service)
             <tr>
                 <td class="align-middle">{{$service->name}}</td>
-                <td class="align-middle">{{$service->description}} </td>
+                <td class="align-middle">{{$service->description}}</td>
                 <td class="align-middle text-center">
                     <div class="pr-1 m-1">
                         <a href="{{url('services/' . $service->id)}}" type="button" class="btn btn-outline-success"
@@ -42,7 +42,6 @@
                 </td>
             </tr>
         @endforeach
-
         </tbody>
     </table>
 </div>
