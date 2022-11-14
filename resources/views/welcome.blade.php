@@ -192,6 +192,51 @@
     </div>
 </div>
 
+<!--form testimonal section starts-->
+<div class="contact">
+    <div class="contact-box">
+        <div class="contact_left"><img src="img/image 8.jpg"></div>
+        <div class="contact_right">
+            <form method="POST" action="{{ url('testimonals')}}">
+                @csrf
+                <h2 class="text_efect">Testemunho</h2>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    autocomplete="name"
+                    placeholder="Insira o seu nome"
+                    class="form-control field"
+                    aria-describedby="nameHelp"
+                >
+                <textarea
+                    type="text"
+                    id="comment"
+                    name="comment"
+                    autocomplete="comment"
+                    placeholder="Insira o seu testemunho"
+                    class="form-control field"
+                    style="height: 150px"
+                    aria-describedby="nameHelp"></textarea>
+                <input
+                    type="radio"
+                    id="visibilityNo"
+                    name="visibility"
+                    autocomplete="visibility"
+                    value="0"
+                    checked
+                    class="form-check-input"
+                    hidden>
+                <button
+                    type="submit"
+                    class="btn"
+                    style="width: 110px">
+                    <strong>Enviar</strong>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
 
 <footer>
     <div class="footer-content">

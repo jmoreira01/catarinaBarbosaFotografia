@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'WelcomeController@index');
 
 
+
 Auth::routes();
 
 // Auth Middleware

@@ -49,7 +49,7 @@ class TestimonalController extends Controller
         $testimonal->visibility      = $request->visibility;
         $testimonal->save();
 
-        return redirect('testimonals')->with('status','Item created successfully!');
+        return redirect('/');
     }
 
 
