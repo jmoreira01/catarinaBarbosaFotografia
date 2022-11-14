@@ -66,5 +66,10 @@ body {
 .nav-link:hover{
     color: red;
 }
+.menostexto{
+    height: 50px;
+    overflow: hidden;
+}
+
 
 
