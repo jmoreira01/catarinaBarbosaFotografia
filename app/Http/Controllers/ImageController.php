@@ -16,7 +16,8 @@ class ImageController extends Controller
      */
     public function index()
     {
-        $images = Image::all();
+        //$images = Image::all();
+        $images = Image::paginate(5);
         return view('dashboard.pages.imagens.indeximagens', ['images' => $images]);
     }
 

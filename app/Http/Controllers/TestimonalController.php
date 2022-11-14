@@ -14,7 +14,8 @@ class TestimonalController extends Controller
      */
     public function index()
     {
-        $testimonals = Testimonal::all();
+        //$testimonals = Testimonal::all();
+        $testimonals = Testimonal::paginate(5);
         return view('dashboard.pages.testemunhos.indextestemunho', ['testimonals' => $testimonals]);
     }
 

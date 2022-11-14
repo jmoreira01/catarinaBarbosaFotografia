@@ -51,5 +51,6 @@
 
         </tbody>
     </table>
+    {{$images->links()}}
 </div>
 
