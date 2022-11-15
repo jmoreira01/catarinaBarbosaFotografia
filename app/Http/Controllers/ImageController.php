@@ -79,6 +79,7 @@ class ImageController extends Controller
     {
         $services = Service::all();
         return view('dashboard.pages.imagens.showimagens', ['image'=>$image, 'services'=>$services]);
+
     }
 
     /**

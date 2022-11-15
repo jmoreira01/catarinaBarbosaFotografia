@@ -59,7 +59,7 @@ Route::group(['middleware' => ['auth', 'ValidationSession']], function () {
     Route::get('/images', 'ImageController@index');
     Route::get('/images/create', 'ImageController@create');
     Route::post('/images', 'ImageController@store');
-    Route::get('/images/{image}', 'ImageController@show');
+    Route::get('/images/{image}/show', 'ImageController@show');
     Route::get('/images/{image}/edit', 'ImageController@edit');
     Route::put('/images/{image}', 'ImageController@update');
     Route::delete('/images/{image}', 'ImageController@destroy');

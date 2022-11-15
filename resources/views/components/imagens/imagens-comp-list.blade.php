@@ -42,7 +42,7 @@
                 <td class="align-middle text-center">{{$image->service->name}} </td>
                 <td class="align-middle text-center">
                     <div class="pr-1 m-1">
-                        <a href="{{url('images/' . $image->id)}}" type="button" class="btn btn-outline-success"
+                        <a href="{{url('images/' . $image->id.'/show')}}" type="button" class="btn btn-outline-success"
                            style="width: 75px"> <strong> Ver </strong>  <i class="bi bi-eye"></i> </a>
                     </div>
                 </td>
