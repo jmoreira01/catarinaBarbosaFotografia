@@ -405,7 +405,17 @@ header{
 
 .swiper-wrapper{
     margin-top: 5rem;
-    height: 37rem;
+    height: 37rem !important;
+    padding-bottom: 5rem;
+}
+
+.swiper-wrapper img{
+    height: 100%;
+}
+
+.swiper-testemunho{
+    margin-top: 5rem;
+    height: 20rem;
     padding-bottom: 5rem;
 }
 

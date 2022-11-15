@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="css/main.css">
     <!-- Costom Icons CDN -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+
+    <script src="https://kit.fontawesome.com/3d3a2feb81.js" crossorigin="anonymous"></script>
+
     <!-- SwiperJS  CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <!-- Imagem shortcut barra de navegação -->
@@ -36,17 +39,15 @@
                 </div>
                 <div class="div">
                     <!-- INPUT EMAIL -->
-
                     <input
                         type="text_login"
                         class="input_login"
                         placeholder="Email"
                         id="email"
-                           @error('email')
+                        @error('email')
                         is-invalid
-
                         @enderror
-                    name="email"
+                        name="email"
                         value="{{ old('email') }}"
                         required
                         autocomplete="email"
@@ -69,8 +70,15 @@
                 <div class="div">
                     <!-- INPUT PASS -->
 
-                    <input type="password" class="input_login" placeholder="Senha" id="password"
-                           @error('password') is-invalid @enderror" name="password" required
+                    <input type="password"
+                           class="input_login"
+                           placeholder="Senha"
+                           id="password"
+                           @error('password')
+                           is-invalid
+                            @enderror
+                    name="password"
+                    required
                     autocomplete="current-password">
                     @error('password')
                     <span class="invalid-feedback" role="alert">

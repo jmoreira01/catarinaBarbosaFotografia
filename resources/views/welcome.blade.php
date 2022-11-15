@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
     <!-- SwiperJS  CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- Fontawesome  CDN -->
     <script src="https://kit.fontawesome.com/3d3a2feb81.js" crossorigin="anonymous"></script>
     <!-- Imagem shortcut barra de navegação -->
     <link rel="shortcut icon" href="{{'storage/'.$organizations->logo}}" type="image/x-icon">
@@ -35,12 +36,6 @@
         </ul>
         <!-- Social Medias -->
         <ul class="nav__socials">
-
-            <li><a href="{{ $organizations -> facebook}}" alt="" target="_blank"><i class="uil uil-facebook"></i></a>
-            </li>
-            <li><a href="{{ $organizations -> instagram}}" target="_blank"><i class="uil uil-instagram-alt"></i></a>
-            </li>
-            <li><a href="{{ $organizations -> linkedin}}" target="_blank"><i class="uil uil-linkedin-alt"></i></a></li>
             <li><a href="{{ route('login') }}"><i class="uil uil-envelope-upload-alt"></i></a></li>
         </ul>
         <!-- Design avaiable for mobiles and tablets only -->
@@ -100,29 +95,22 @@
             <div class="about_image">
                 <div class="about_image-bg"></div>
                 <div class="about_image-lg">
-                    <img src="img/image 8.jpg">
+                    <img src="img/Catarina.jpg">
                 </div>
                 <div class="about_image-sm">
-                    <img src="img/image 8.jpg">
+                    <img src="img/Catarina.jpg">
                 </div>
             </div>
         </div>
         <div class="about_right">
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, ab neque facilis delectus voluptas
-                quis, ducimus quos ut consequuntur tenetur provident perspiciatis molestias dolores assumenda dolorum ex
-                hic soluta perferendis?
-            </p>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, ab neque facilis delectus voluptas
-                quis, ducimus quos ut consequuntur tenetur provident perspiciatis molestias dolores assumenda dolorum ex
-                hic soluta perferendis?
-            </p>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, ab neque facilis delectus voluptas
-                quis, ducimus quos ut consequuntur tenetur provident perspiciatis molestias dolores assumenda dolorum ex
-                hic soluta perferendis?
-            </p>
+            <p>Sou a Catarina Barbosa e sou fotógrafa profissional.</p>
+            <p>A minha paixão é a fotografia.</p>
+            <p>Desde muito cedo que não vivo sem uma camera, captando a essência da beleza da vida em pequenos pedaços de filme fotográfico.</p>
+            <p>Numa altura em que as cameras digitais tornaram-se moda, tornou-me mais ambiciosa nesta área que me apaixona. Foi numa noite de natal, quando recebi a minha primeira máquina, que decididamente, entreguei-me a esta área. Com foco e, extremamente motivada, investi todos os recursos que consegui para explorar e aprender mais sobre fotografia com o intuito de trabalhar profissionalmente. A minha paixão era notável e incansavelmente, queria crescer neste mundo.  </p>
+            <p>E, com a mesma vontade que tenho de respirar, aceitei o desafio proposto pelo meu companheiro para para deixar o solo confortável e voar para outros horizontes. Entre cursos, workshops e aprendizagens, cimentei o caminho que me faz feliz. Hoje sou fotógrafa!</p>
+            <p>Comecei por fazer as primeiras sessões com casamentos e batizados, sentindo a força que me move com a beleza da minha objectiva. Continuo sem parar e quero mais, quero mostrar o melhor que sei para as pessoas que chegam até mim.</p>
+            <p>Recentemente, especializei-me em fotografia de bebés e recém-nascidos.</p>
+            <p>Agora que comecei neste mundo não quero parar, quero ir onde a fotografia me quiser levar.</p>
         </div>
     </div>
 </section>
@@ -156,16 +144,17 @@
     </div>
 </div>
 
-<div id="testimonals" style="margin-left: 50px;margin-right: 50px" class="container">
+<div id="testimonals"  class="container">
     <div class="swiper mySwiper">
-        <h1>Diga-nos a sua opinião! &nbsp; <i class="fa-solid fa-heart fa-beat"
-                                              style="--fa-animation-duration: 2s; cursor: pointer" onclick="toggleFormTestimonal()"> </i>
+        <h1>Diga-nos a sua opinião! &nbsp;
+            <i class="fa-solid fa-heart fa-beat"
+               style="--fa-animation-duration: 2s; cursor: pointer" onclick="toggleFormTestimonal()">
+            </i>
         </h1>
-        <div class="swiper-wrapper">
-
-            @foreach($testimonals as $testimonal )
-                <div class="swiper-slide ">
-                    <div style="text-align: center; font-size: 20px">
+        <div class="swiper-wrapper" style="height: 12rem !important;">
+            @foreach($testimonals as $testimonal)
+                <div class="swiper-slide" style="overflow-y: auto">
+                    <div style="text-align: center; font-size: 20px;">
                         <i>"{{$testimonal->comment}}"</i>
                     </div>
                     <div style="text-align: center">
@@ -241,29 +230,30 @@
             <div class="lower">
                 <div class="topic">Nosso Contacto</div>
                 <div class="phone">
-                    <a href="#"><i class="fas fa-phone-volume"></i>+351 XXX-XXX-XXX</a>
+                    <a href="#"><i class="fas fa-phone-volume"></i>{{ $organizations -> phone_number}}</a>
                 </div>
                 <div class="email">
-                    <a href="#"><i class="fas fa-envelope"></i>catarina@gmail.com</a>
+                    <a href="#"><i class="fas fa-envelope"></i>{{ $organizations -> email}}</a>
                 </div>
                 <div class="email">
-                    <a href="#"><i class="fa-solid fa-location-pin"></i>Rua: XPTP, Porto - 4535-000</a>
+                    <a href="#"><i class="fa-solid fa-location-pin"></i>
+                        {{ $organizations -> city}} &nbsp; {{ $organizations -> postal_code}}</a>
+                    <br>
+                        {{ $organizations -> address}}
                 </div>
 
                 <div class="media-icons">
-                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="{{ $organizations -> facebook}}" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="{{ $organizations -> instagram}}" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="{{ $organizations -> linkedin}}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
         <div class="middle box">
             <div class="topic">Os nossos serviços</div>
-            <div><a href="#">Sessão Newborn</a></div>
-            <div><a href="#">Sessãao grávidas</a></div>
-            <div><a href="#">Sessão Eventos</a></div>
-            <div><a href="#">Sessão Crianças</a></div>
-            <div><a href="#">Sessão Família</a></div>
+            @foreach($services as $service )
+                <div>{{$service->name}}</div>
+            @endforeach
         </div>
         <div class="right box">
             <!--form contact section starts-->
