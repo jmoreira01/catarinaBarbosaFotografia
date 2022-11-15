@@ -158,7 +158,8 @@
 
 <div id="testimonals" style="margin-left: 50px;margin-right: 50px" class="container">
     <div class="swiper mySwiper">
-        <h1>Diga-nos a sua opinião! &nbsp; <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 2s; cursor: pointer" id="onClick"> </i>
+        <h1>Diga-nos a sua opinião! &nbsp; <i class="fa-solid fa-heart fa-beat"
+                                              style="--fa-animation-duration: 2s; cursor: pointer" onclick="toggleFormTestimonal()"> </i>
         </h1>
         <div class="swiper-wrapper">
 
@@ -178,10 +179,9 @@
 </div>
 
 
-
 <!--form testimonal section starts-->
 
-<div class="contact" id="toggleComment" style="display: none">
+<div class="contact toggleComment" id="toggleComment" >
     <div class="contact-box">
         <div class="contact_left"><img src="img/image 8.jpg"></div>
         <div class="contact_right">
@@ -227,7 +227,6 @@
     </div>
 </div>
 <!--form testimonal section ENDS-->
-
 
 
 <footer>
@@ -286,23 +285,11 @@
             <p>Copyright © 2022 <a href="#">Cesae - Web & Mobile Development: </a> <strong>Team J</strong> <br>
                 João Araújo, Jorge Moreira, Ana Paula Oliveira</p>
         </div>
+    </div>
 </footer>
 <!--Footer section ends-->
 
 <!-- SwiperJS - note: para que tudo funcione todos os links são necessários, não fiz via npm para facilicar na transição para o Laravel -->
-<script>
-
-    var icon = document.getElementById('onClick');
-
-    icon.addEventListener("click", function(){
-        var toggleComment = document.getElementById("toggleComment");
-
-        if(toggleComment.style.display === "none") {toggleComment.style.display = "block"}
-        else {
-            toggleComment.style.display = "none";
-
-            }});
-</script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
 </body>

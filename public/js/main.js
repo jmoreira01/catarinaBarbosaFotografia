@@ -86,3 +86,8 @@ inputs.forEach(input => {
     input.addEventListener("focus", addcl);
     input.addEventListener("blur", remcl);
 });
+
+function toggleFormTestimonal(){
+    var element = document.getElementById("toggleComment");
+    element.classList.toggle("toggleComment");
+}
