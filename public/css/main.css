@@ -1278,3 +1278,142 @@ footer a:hover{
         display: none;
     }
 }
+
+/* CSS IMAGE GALERY */
+
+.input-gallery{
+    display: none;
+}
+.gallery-content{
+    width: 100%;
+    text-align: center;
+}
+
+.text-gallery{
+    font-weight: bold;
+    font-size: 5rem;
+    margin: 40px 0;
+    position: relative;
+}
+
+.text-gallery::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: black;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%{
+        width: 100px;
+    }
+
+    50%{
+        width: 200px;
+    }
+
+    100%{
+        width: 100px;
+    }
+}
+
+.top-content{
+    background-color: rgb(229, 236, 238);
+    width: 90%;
+    margin: 0 auto 20px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    -webkit-box-shadow: 11px 7px 41px 10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 11px 7px 41px 10px rgba(0,0,0,0.75);
+    box-shadow: 11px 7px 41px 10px rgba(0,0,0,0.75);
+}
+
+h3{
+    height: 100%;
+    background-color: lightblue;
+    line-height: 60px;
+    padding: 0 50px;
+}
+
+label{
+    display: inline-block;
+    height: 100%;
+    margin: 0 50px;
+    line-height: 60px;
+    font-size: 20px;
+    color: var(--color-desert);
+    cursor: pointer;
+    transition: color .5s;
+}
+
+label:hover{
+    color: #000;
+}
+
+.photo-gallery{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.pic{
+    position: relative;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px black;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.pic::before{
+    content: "CATARINA BARBOSA";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: wheat;
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+
+.pic::after{
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .4);
+    transition: .3s;
+}
+
+.pic:hover::after{
+    height: 100%;
+}
+
+.pic:hover::before{
+    margin-top: 0;
+    opacity: 1;
+}

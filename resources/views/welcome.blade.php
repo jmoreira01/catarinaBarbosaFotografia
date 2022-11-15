@@ -129,8 +129,8 @@
             voluptatibus, quam velit!
         </p>
     </div>
-    <!-- Swiper -->
 
+    <!-- Swiper start -->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
 
@@ -143,7 +143,30 @@
         <div class="swiper-pagination"></div>
     </div>
 </div>
+<!-- Swiper end -->
 
+<!--Gallery section starts-->
+
+<div class="gallery-content" style="margin-bottom: 80px">
+    <h1 class="text-gallery">Galeria de Fotos</h1>
+    <div class="top-content" style="justify-content: center">
+        @foreach($services as $service )
+                <label for="check2"> {{$service->name}}</label>
+        @endforeach
+    </div>
+
+    <div class="photo-gallery">
+        @foreach($images->take(8) as $image)
+            <div class="pic">
+            <img src="{{ asset('storage/'.$image->image) }}">
+            </div>
+        @endforeach
+    </div>
+
+</div>
+<!--Gallery section end-->
+
+<!-- Testemunhos start -->
 <div id="testimonals"  class="container">
     <div class="swiper mySwiper">
         <h1>Diga-nos a sua opinião! &nbsp;
@@ -166,6 +189,7 @@
         <div class="swiper-pagination"></div>
     </div>
 </div>
+<!-- Testemunhos end -->
 
 
 <!--form testimonal section starts-->
