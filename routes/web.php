@@ -16,7 +16,7 @@ use App\Http\Controllers\MailController;
 */
 
 Route::get('/', 'WelcomeController@index');
-
+Route::post('/testimonals', 'TestimonalController@store');
 Auth::routes();
 
 // Auth Middleware
@@ -76,11 +76,12 @@ Route::group(['middleware' => ['auth', 'ValidationSession']], function () {
 // Testimonals
     Route::get('/testimonals', 'TestimonalController@index');
     Route::get('/testimonals/create', 'TestimonalController@create');
-    Route::post('/testimonals', 'TestimonalController@store');
+
     Route::get('/testimonals/{testimonal}', 'TestimonalController@show');
     Route::get('/testimonals/{testimonal}/edit', 'TestimonalController@edit');
     Route::put('/testimonals/{testimonal}', 'TestimonalController@update');
     Route::delete('/testimonals/{testimonal}', 'TestimonalController@destroy');
 //
+
 });
 
