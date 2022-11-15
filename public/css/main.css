@@ -43,8 +43,7 @@ html{
 
 body{
     font-family: 'Montserrat', sans-serif;
-    background: rgb(243,210,195);
-    background: linear-gradient(90deg, rgba(243,210,195,1) 20%, rgba(252,226,209,1) 35%, rgba(214,137,131,1) 99%);
+    background: linear-gradient(-45deg, #FCE2D1, #f3d2c3, #d68983, #85a2b2);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     height: 100vh;
@@ -146,7 +145,7 @@ nav{
 }
 
 .nav__socials a:hover {
-    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4) ;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4,) ;
 }
 
 /*NavBar Section End*/
@@ -406,12 +405,8 @@ header{
 
 .swiper-wrapper{
     margin-top: 5rem;
-    height: 37rem !important;
+    height: 37rem;
     padding-bottom: 5rem;
-}
-
-.swiper-wrapper img{
-    height: 100%;
 }
 
 .swiper-slide{
@@ -439,21 +434,16 @@ header{
     background-color: #000 !important;
 }
 
-footer{
-    margin-top: 3rem;
-}
-
-h3, h4{
-    text-align: center;
-}
 
 /*Contact form*/
 
 .contact{
     position: relative;
+    margin-right: auto;
+    margin-left: auto;
     width: 100%;
-    height: 100%;
-    display: flex;
+    /*height: 100%;*/
+    display: block;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
@@ -463,7 +453,7 @@ h3, h4{
     content: '';
     position: absolute;
     width: 100%;
-    height: 100%;
+    /*height: 100%;*/
     left: 0;
     top: 0;
     background-size: cover;
@@ -479,6 +469,8 @@ h3, h4{
     text-align: center;
     background-color: #fff;
     box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact_left{
@@ -548,6 +540,135 @@ textarea{
 
 .field:focus{
     background-color: #fff;
+}
+
+/*footer*/
+footer{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    background: #f1cfcd;
+}
+footer .content{
+    max-width: 1350px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer .content p,a{
+    color: rgb(1, 1, 1);
+}
+footer .content .box{
+    width: 33%;
+    transition: all 0.4s ease;
+}
+footer .content .topic{
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    margin-bottom: 16px;
+
+}
+footer .content p{
+    text-align: justify;
+}
+footer .content .lower .topic{
+    margin: 24px 0 5px 0;
+}
+footer .content .lower i{
+    padding-right: 16px;
+}
+footer .content .middle{
+    padding-left: 80px;
+}
+footer .content .middle a{
+    line-height: 32px;
+}
+footer .content .right input[type="text"]{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    color: #000000;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 17px;
+
+}
+footer .content .right input[type="submit"]{
+    height: 42px;
+    width: 100%;
+    font-size: 18px;
+    color: #000000;
+    background: #e8c0b7;
+    outline: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 12px;
+    border: 2px solid #d8c0bb;
+    transition: all 0.3s ease-in-out;
+}
+.content .right input[type="submit"]:hover{
+    background: none;
+    color:  #eeb3a5;
+}
+footer .content .media-icons a{
+    font-size: 45px;
+    height: 45px;
+    width: 45px;
+    display: inline-block;
+    text-align: center;
+    line-height: 43px;
+    border-radius: 5px;
+
+    margin: 30px 5px 0 0;
+    transition: all 0.3s ease;
+}
+.content .media-icons a:hover{
+    border-color: #ded3d1;
+}
+footer .bottom{
+    width: 100%;
+    text-align: right;
+    color: #060606;
+    padding: 0 40px 5px 0;
+}
+footer .bottom a{
+    color: #040404;
+}
+footer a{
+    transition: all 0.3s ease;
+}
+footer a:hover{
+    color: #fffffe;
+}
+@media (max-width:1100px) {
+    footer .content .middle{
+        padding-left: 50px;
+    }
+}
+@media (max-width:950px){
+    footer .content .box{
+        width: 50%;
+    }
+    .content .right{
+        margin-top: 40px;
+    }
+}
+@media (max-width:560px){
+    footer{
+        position: relative;
+    }
+    footer .content .box{
+        width: 100%;
+        margin-top: 30px;
+    }
+    footer .content .middle{
+        padding-left: 0;
+    }
 }
 
 /*Login Page */
@@ -766,7 +887,15 @@ textarea{
     color: aliceblue;
 }
 
+/*footer*/
 
+@media (max-width:500px) {
+    .footer-menu ul{
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
 /*Media login Page*/
 
 @media screen and (max-width: 1050px){
@@ -1136,185 +1265,4 @@ textarea{
     .contact_left{
         display: none;
     }
-}
-
-footer{
-
-    position: relative;
-
-    bottom: 0;
-
-    left: 0;
-
-    right: 0;
-
-    background:var(--color-light);
-
-    height: auto;
-
-    width: 100vw;
-
-    padding-top: 40px;
-
-    color: rgb(0, 0, 0);
-
-}
-
-
-
-.footer-content{
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    flex-direction: column;
-
-    text-align: center;
-
-}
-
-
-
-.footer-content h3{
-
-    font-size: 2.1rem;
-
-    font-weight: 500;
-
-    text-transform: capitalize;
-
-    line-height: 3rem;
-
-}
-
-
-
-.footer-content p{
-
-    max-width: 500px;
-
-    margin: 10px auto;
-
-    line-height: 28px;
-
-    font-size: 14px;
-
-    color: #000000;
-
-}
-
-.socials{
-
-    list-style: none;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    margin: 1rem 0 3rem 0;
-
-}
-
-
-
-.socials li{
-
-    margin: 0 10px;
-
-}
-
-
-
-.socials a{
-
-    text-decoration: none;
-
-    color: #fff;
-
-    border: 1.1px solid white;
-
-    padding: 5px;
-
-    border-radius: 50%;
-
-}
-
-
-
-.socials a i{
-
-    font-size: 1.1rem;
-
-    width: 20px;
-
-    transition: color .4s ease;
-
-}
-
-
-
-.socials a:hover i{
-
-    color: aqua;
-
-}
-
-.footer-menu{
-
-    float: right;
-
-}
-
-
-
-.footer-menu ul{
-
-    display: flex;
-
-}
-
-
-
-.footer-menu ul li{
-
-    padding-right: 10px;
-
-    display: block;
-
-}
-
-
-
-.footer-menu ul li a{
-
-    color:var(--color-creme);
-
-    text-decoration: none;
-
-}
-
-
-
-.footer-menu ul li a:hover{
-
-    color: #000000;
-
-}
-@media (max-width:500px) {
-
-    .footer-menu ul{
-
-        display: flex;
-
-        margin-top: 10px;
-
-        margin-bottom: 20px;
-
-    }
-
 }
