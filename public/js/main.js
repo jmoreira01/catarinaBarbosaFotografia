@@ -18,7 +18,7 @@ textButtons.forEach(textButton =>{
 
 //SwiperJS - Tablets, Web and Mobile configurations
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
+    slidesPerView: 3,
     spaceBetween: 20,
     pagination: {
         el: ".swiper-pagination",
@@ -33,6 +33,7 @@ var swiper = new Swiper(".mySwiper", {
         spaceBetween: 60
     }
 });
+
 
 
 //Responsive navbar

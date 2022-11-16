@@ -8,7 +8,7 @@
                     momentos únicos pelas minhas lentes! </p>
             </div>
             <div class="lower">
-                <div class="topic">Nosso Contacto</div>
+                <div class="topic">Contacto</div>
                 <div class="phone">
                     <a href="#"><i class="fas fa-phone-volume"></i>{{ $organizations -> phone_number}}</a>
                 </div>
@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="middle box">
-            <div class="topic">Os nossos serviços</div>
+            <div class="topic">Serviços</div>
             @foreach($services as $service )
                 <div>{{$service->name}}</div>
             @endforeach

@@ -5,10 +5,10 @@
         </a>
         <ul class="nav__links">
             <li><a href="/">Home</a></li>
-            <li><a href="#about">Sobre Mim</a></li>
-            <li><a href="#services">Serviços</a></li>
-            <li><a href="#gallery">Galeria</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="/#about">Sobre Mim</a></li>
+            <li><a href="/#services">Serviços</a></li>
+            <li><a href="/#gallery">Galeria</a></li>
+            <li><a href="/#contacto">Contacto</a></li>
         </ul>
         <!-- Social Medias -->
         <ul class="nav__socials">
