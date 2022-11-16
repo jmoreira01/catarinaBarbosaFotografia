@@ -151,7 +151,10 @@
     <h1 class="text-gallery">Galeria de Fotos</h1>
     <div class="top-content" style="justify-content: center">
         @foreach($services as $service )
-                <label for="check2"> {{$service->name}}</label>
+
+                    <a class="labelMenu" href="{{url('gallery/' . $service->id)}}" type="button" class="btn btn-outline-success"
+                       style="width: 75px"> {{$service->name}} </a>
+
         @endforeach
     </div>
 

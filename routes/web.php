@@ -17,6 +17,8 @@ use App\Http\Controllers\MailController;
 
 Route::get('/', 'WelcomeController@index');
 Route::post('/testimonals', 'TestimonalController@store');
+Route::get('/gallery/{service}', 'GalleryController@index');
+
 Auth::routes();
 
 // Auth Middleware

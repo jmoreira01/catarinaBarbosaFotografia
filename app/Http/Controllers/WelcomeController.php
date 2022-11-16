@@ -16,10 +16,11 @@ class WelcomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $organizations_id = 1;
         $visibility1 = 1;
+
 
         $videos = Video::all();
         $images = Image::all();
@@ -33,7 +34,7 @@ class WelcomeController extends Controller
             'images' => $images ,
             'services' => $services,
             'organizations' => $organizations,
-            'testimonals' => $testimonals
+            'testimonals' => $testimonals,
         ]);
     }
 }

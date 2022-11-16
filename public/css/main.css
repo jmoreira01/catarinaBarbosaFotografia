@@ -1417,3 +1417,18 @@ label:hover{
     margin-top: 0;
     opacity: 1;
 }
+
+.labelMenu{
+    display: inline-block;
+    height: 100%;
+    margin: 0 50px;
+    line-height: 60px;
+    font-size: 20px;
+    color: var(--color-desert);
+    cursor: pointer;
+    transition: color .5s;
+}
+
+.labelMenu:hover{
+    color: #000;
+}
