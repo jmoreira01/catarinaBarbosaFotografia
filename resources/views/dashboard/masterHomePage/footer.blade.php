@@ -10,13 +10,13 @@
             <div class="lower">
                 <div class="topic">Contacto</div>
                 <div class="phone">
-                    <a href="#"><i class="fas fa-phone-volume"></i>{{ $organizations -> phone_number}}</a>
+                    <a href="tel:912164392"><i class="fas fa-phone-volume"></i>{{ $organizations -> phone_number}}</a>
                 </div>
                 <div class="email">
-                    <a href="#"><i class="fas fa-envelope"></i>{{ $organizations -> email}}</a>
+                    <a href="mailto:catarinabarbosafotografia@gmail.com"><i class="fas fa-envelope"></i>{{ $organizations -> email}}</a>
                 </div>
                 <div class="email">
-                    <a href="#"><i class="fa-solid fa-location-pin"></i>
+                    <a><i class="fa-solid fa-location-pin"></i>
                         {{ $organizations -> city}} &nbsp; {{ $organizations -> postal_code}}</a>
                     <br>
                     {{ $organizations -> address}}
