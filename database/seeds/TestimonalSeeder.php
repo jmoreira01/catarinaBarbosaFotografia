@@ -12,28 +12,30 @@ class TestimonalSeeder extends Seeder
     public function run()
     {
         DB::table('testimonals')->insert([
-            'name' => 'Ricardinho Quaresma',
-            'comment' => 'comentário',
-            'visibility' => '0',
-
-        ]);
-
-        DB::table('testimonals')->insert([
-            'name' => 'Sandra Jesus',
-            'comment' => 'Um comentário',
+            'name' => 'Susana Esteves',
+            'comment' => 'Excelente profissional. Sem dúvida que recomendo.',
             'visibility' => '1',
 
         ]);
 
         DB::table('testimonals')->insert([
-        'name' => 'Fatima felgueiras',
-        'comment' => 'dois comentário',
-        'visibility' => '0',
+            'name' => 'Sandra Jesus',
+            'comment' => 'Para o meu filho, só poderia escolher o melhor. Com a Catarina está em boas mãos.',
+            'visibility' => '1',
+
+        ]);
+
+        DB::table('testimonals')->insert([
+        'name' => 'Alice Moutinho',
+        'comment' => 'A Catarina foi muito cuidadosa em todo o processo fotográfico. O meu filho consegue ser muito irrequieto, mas as sessões fotográficas foram um sucesso. Recomendo! ',
+        'visibility' => '1',
 
     ]);
         DB::table('testimonals')->insert([
-        'name' => 'Pinto da costa',
-        'comment' => 'trÊs comentário',
+        'name' => 'Zeferino Fernandes',
+        'comment' => 'Recomendo, sem dúvida alguma.
+        A melhor profissional para captar as bochechas da minha querida filha.
+        Gostei muito do resultado final. ',
         'visibility' => '1',
     ]);
     }

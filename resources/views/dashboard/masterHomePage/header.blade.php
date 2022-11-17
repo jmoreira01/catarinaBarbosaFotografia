@@ -1,4 +1,4 @@
-<nav>
+<nav style="background-color: #FCE2D1">
     <div class="container nav__container">
         <a href="/" class="nav_logo">
             <img src="{{ asset('storage/'.$organizations->logo) }}" alt="Logo">

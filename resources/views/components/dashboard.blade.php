@@ -11,7 +11,7 @@
         <div class="row justify-content-center">
             <div class="row row-cols-1 row-cols-md-3 g-4 "
                  style="justify-content: center; text-align: center">
-                <div class="col">
+                <!--<div class="col">
                     <div class="card efeito3d_img1">
                         <a href="/accesses"><img src="img/icons/access.png" class="card-img-top img_dashboard "
                                                  alt="..."></a>
@@ -19,7 +19,7 @@
                             <h5 class="card-title">ACESSOS</h5>
                         </div>
                     </div>
-                </div>
+                </div>                                                     Poderá ser necessário incluir -->
                 <div class="col">
                     <div class="card efeito3d_img2">
                         <a href="/services"><img src="img/icons/servico.png" class="card-img-top img_dashboard"

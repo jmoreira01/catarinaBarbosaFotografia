@@ -9,7 +9,7 @@
 @section('content')
 
 
-    @component('components.gallery', ['service'=>$service, 'images'=>$images, 'organizations' => $organizations, 'services'=> $services])
+    @component('components.gallery', ['service'=>$service, 'images'=>$images, 'videos'=>$videos, 'organizations' => $organizations, 'services'=> $services])
     @endcomponent
 
 @stop

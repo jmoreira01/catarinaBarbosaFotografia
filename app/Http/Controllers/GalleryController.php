@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Image;
 use App\Organization;
 use App\Service;
+use App\Video;
 use Illuminate\Http\Request;
 
 class GalleryController extends Controller
@@ -16,6 +17,8 @@ class GalleryController extends Controller
         $services = Service::all();
         $organizations = Organization::find($organizations_id);
         $images = Image::where('service_id',$service->id)->get();
-        return view('dashboard.pages.indexGallery', ['service'=>$service, 'images'=>$images, 'organizations' => $organizations, 'services'=> $services]);
+        $videos = Video::where('service_id',$service->id)->get();
+
+        return view('dashboard.pages.indexGallery', ['service'=>$service, 'images'=>$images,  'videos'=>$videos, 'organizations' => $organizations, 'services'=> $services]);
     }
 }

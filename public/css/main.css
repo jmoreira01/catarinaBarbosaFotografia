@@ -317,11 +317,11 @@ header{
 #about{
     margin-top: 20rem;
     padding-top: 7rem;
-    margin-left: 5rem;
+
 }
 
 .about_container{
-    display:flex;
+    display: inline-flex ;
     grid-template-columns: 5rem 20rem auto;
     gap: 5rem;
     position: relative;
@@ -340,7 +340,7 @@ header{
 .about_image-bg{
     width: 24rem;
     height: 24rem;
-    bottom: 0;
+    bottom: -1rem;
     position: absolute;
     background-color: var(--color-light);
 }
@@ -348,7 +348,7 @@ header{
 .about_image-lg{
     position:relative;
     left: 1rem;
-    bottom: 1rem;
+
     filter: saturate(0) brightness(0.3);
     transition: 500ms ease;
 }
@@ -375,13 +375,14 @@ header{
 }
 
 .about_right{
-    margin-left: 12rem;
-    padding-top: 6rem;
+    margin-left: 10rem;
+    margin-bottom: 10rem;
 }
 
 .about_right p {
-    font-size: 1.2rem;
-    margin: 0 4rem 1.5rem 0;
+    padding: 10px;
+    font-size: 20px;
+
 }
 
 /* About me section end */
@@ -959,7 +960,7 @@ footer a:hover{
 
 /* ----------- Media Query - medium screens -----------*/
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1077px){
 
     .container {
         width: var(--container-width-md);
@@ -1173,7 +1174,7 @@ footer a:hover{
 
 /* ----------- Media Query - small screens -----------*/
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 480px){
     h1, h2{
         font-size: 2rem;
         line-height: 1.3;
@@ -1257,6 +1258,7 @@ footer a:hover{
 .toggleComment{
     display: none;
 }
+
 @media screen and (max-width: 600px){
     .contact-box{
         grid-template-columns: 1fr;
@@ -1272,8 +1274,11 @@ footer a:hover{
     display: none;
 }
 .gallery-content{
-    width: 100%;
+    width: 90%;
     text-align: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .text-gallery{
@@ -1347,8 +1352,9 @@ label:hover{
     width: 90%;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
+
 }
 
 .pic{

@@ -25,7 +25,7 @@
 </head>
 <body>
 
-@component('dashboard.masterHomePage.header', ['service'=>$service, 'images'=>$images, 'organizations' => $organizations, 'services'=> $services])
+@component('dashboard.masterHomePage.header', ['service'=>$service, 'images'=>$images, 'videos'=>$videos, 'organizations' => $organizations, 'services'=> $services])
 @endcomponent
 
 <main>
@@ -33,7 +33,7 @@
 </main>
 
 
-@component('dashboard.masterHomePage.footer', ['service'=>$service, 'images'=>$images, 'organizations' => $organizations, 'services'=> $services])
+@component('dashboard.masterHomePage.footer', ['service'=>$service, 'images'=>$images,  'videos'=>$videos, 'organizations' => $organizations, 'services'=> $services])
 @endcomponent
 
 </body>
