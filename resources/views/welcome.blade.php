@@ -59,12 +59,7 @@
         <div class="header_right">
             <div class="header_head">
                 <h1>Compartilhe momentos únicos pelas minhas lentes!</h1>
-                <p>Uma fotografia tem o poder de parar o tempo e captar a essência para todo o sempre.<br>Um sorriso,
-                    uma lágrima, um momento de conforto, de alegria e tudo o que a vida proporcionar.
-                    <br> Um(a) filho(a) é a razão de tudo isso e sei o quanto importante é, acompanhar o crescimento dos
-                    seus pelos anos fora.
-                    <br>Terei todo o gosto em captar desde o nascimento até ao crescimento do seu rebento, pois sei o
-                    quanto é importante guardar esses momentos.
+                <p>Uma fotografia tem o poder de parar o tempo e captar a essência para todo o sempre.
                     <br><strong>Veja o leque de serviços que ofereço e sinta-se à vontade para explorar esta página e
                         conversar comigo.</strong></p>
             </div>
