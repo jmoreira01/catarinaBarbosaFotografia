@@ -63,6 +63,7 @@
                     <h4 for="city">Cidade:</h4>
                     <input
                         type="text"
+                        id="city"
                         value="{{ $organization -> city}}"
                         class="form-control inputbox"
                         disabled>

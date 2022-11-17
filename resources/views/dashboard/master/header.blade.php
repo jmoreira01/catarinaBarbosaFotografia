@@ -16,10 +16,10 @@
 
                 @if(!Request::is('home'))
 
-                    <li class="nav-item">
+                    <!--<li class="nav-item">
                         <a class="nav-link {{ Request::is('accesses') ? 'active' : '' }}" role="button"
                            href="/accesses">Acessos</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link {{ Request::is('services') ? 'active' : '' }}" role="button"
                            href="/services">Serviços</a>

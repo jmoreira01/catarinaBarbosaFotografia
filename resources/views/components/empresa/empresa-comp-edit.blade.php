@@ -116,7 +116,7 @@
                         name="postal_code"
                         autocomplete="postal_code"
                         value="{{ $organization -> postal_code}}"
-                        placeholder="País"
+                        placeholder="Código Postal"
                         class="form-control inputbox">
                 </div>
 
